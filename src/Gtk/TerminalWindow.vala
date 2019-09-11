@@ -203,16 +203,8 @@ public class TerminalWindow : Gtk.Window {
 		process_quit(child_pid);
 	}
 
-/* builds in cosmic and disco
- * xenial fails with:
-Gtk/TerminalWindow.vala:242.19-242.29: error: Argument 1: Cannot convert from `char[]' to `string'
-                term.feed_child(c.to_utf8());
-                                ^^^^^^^^^^^
- */
-
 	public void execute_command(string command){
-		string c = command.concat("\n");
-		term.feed_child(c.to_utf8());
+		term.feed_child("%s\n".printf(command), -1);
 	}
 
 	public void execute_script(string script_path, bool wait = false){
