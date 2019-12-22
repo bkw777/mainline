@@ -274,6 +274,7 @@ public class MainWindow : Gtk.Window{
 		}
 
 		var kern_4 = new LinuxKernel.from_version("4.0");
+		var kern_5 = new LinuxKernel.from_version("5.0");
 
 		TreeIter iter;
 		bool odd_row = false;
@@ -284,9 +285,13 @@ public class MainWindow : Gtk.Window{
 			if (LinuxKernel.hide_unstable && kern.is_unstable){
 				continue;
 			}
+			if (LinuxKernel.hide_older5 && (kern.compare_to(kern_5) < 0)){
+				continue;
+			}
 			if (LinuxKernel.hide_older && (kern.compare_to(kern_4) < 0)){
 				continue;
 			}
+
 
 			odd_row = !odd_row;
 

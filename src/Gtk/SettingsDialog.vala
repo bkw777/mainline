@@ -41,6 +41,7 @@ public class SettingsDialog : Gtk.Dialog {
 	private Gtk.CheckButton chk_notify_dialog;
 	private Gtk.CheckButton chk_hide_unstable;
 	private Gtk.CheckButton chk_hide_older;
+	private Gtk.CheckButton chk_hide_older5;
 		
 	public SettingsDialog.with_parent(Window parent) {
 		set_transient_for(parent);
@@ -174,6 +175,17 @@ public class SettingsDialog : Gtk.Dialog {
 		
 		chk.toggled.connect(()=>{
 			LinuxKernel.hide_unstable = chk_hide_unstable.active;
+		});
+
+		// chk_hide_older5
+		chk = new CheckButton.with_label(_("Hide kernels older than 5.0"));
+		chk.active = LinuxKernel.hide_older5;
+		chk.margin_start = 6;
+		vbox_main.add(chk);
+		chk_hide_older5 = chk;
+		
+		chk.toggled.connect(()=>{
+			LinuxKernel.hide_older5 = chk_hide_older5.active;
 		});
 
 		// chk_hide_older

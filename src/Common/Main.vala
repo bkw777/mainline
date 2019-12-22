@@ -142,6 +142,7 @@ public class Main : GLib.Object{
 		config.set_string_member("notify_dialog", notify_dialog.to_string());
 		config.set_string_member("hide_unstable", LinuxKernel.hide_unstable.to_string());
 		config.set_string_member("hide_older", LinuxKernel.hide_older.to_string());
+		config.set_string_member("hide_older5", LinuxKernel.hide_older5.to_string());
 		config.set_string_member("notify_interval_unit", notify_interval_unit.to_string());
 		config.set_string_member("notify_interval_value", notify_interval_value.to_string());
         config.set_string_member("connection_timeout_seconds", connection_timeout_seconds.to_string());
@@ -181,6 +182,7 @@ public class Main : GLib.Object{
 			// initialize static
 			LinuxKernel.hide_unstable = true;
 			LinuxKernel.hide_older = true;
+			LinuxKernel.hide_older5 = true;
 			return;
 		}
 
@@ -206,6 +208,7 @@ public class Main : GLib.Object{
 
 		LinuxKernel.hide_unstable = json_get_bool(config, "hide_unstable", true);
 		LinuxKernel.hide_older = json_get_bool(config, "hide_older", true);
+		LinuxKernel.hide_older5 = json_get_bool(config, "hide_older5", true);
 
 		log_debug("Load config file: %s".printf(APP_CONFIG_FILE));
 	}

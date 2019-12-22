@@ -46,6 +46,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 	public static string CURRENT_USER_HOME;
 	
 	public static bool hide_older;
+	public static bool hide_older5; //Add bool for hide older then 5.0 kernels
 	public static bool hide_unstable;
 		
 	public static LinuxKernel kernel_active;
@@ -245,6 +246,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 	private static void query_thread() {
 
 		log_debug("query: hide_older: %s".printf(hide_older.to_string()));
+		log_debug("query: hide_older5kernels: %s".printf(hide_older5.to_string()));
 		log_debug("query: hide_unstable: %s".printf(hide_unstable.to_string()));
 
 		//DownloadManager.reset_counter();
@@ -270,11 +272,15 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		// TODO: Implement locking for multiple download threads
 
 		var kern_4 = new LinuxKernel.from_version("4.0");
+		var kern_5 = new LinuxKernel.from_version("5.0");
 		
 		status_line = "";
 		progress_total = 0;
 		progress_count = 0;
 		foreach(var kern in kernel_list){
+			if (hide_older5 && (kern.compare_to(kern_5) < 0)){
+				continue;
+			}
 			if (hide_older && (kern.compare_to(kern_4) < 0)){
 				continue;
 			}
@@ -305,6 +311,11 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 
 			if (!kern.is_valid){
 				//log_debug("invalid: %s".printf(kern.version_main));
+				continue;
+			}
+
+			if (hide_older5 && (kern.compare_to(kern_5) < 0)){
+				log_debug("older than 5.0: %s".printf(kern.version_main));
 				continue;
 			}
 
@@ -1153,11 +1164,15 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		log_draw_line();
 
 		var kern_4 = new LinuxKernel.from_version("4.0");
+		var kern_5 = new LinuxKernel.from_version("5.0");
 		foreach(var kern in kernel_list){
 			if (!kern.is_valid){
 				continue;
 			}
 			if (hide_unstable && kern.is_unstable){
+				continue;
+			}
+			if (hide_older5 && (kern.compare_to(kern_5) < 0)){
 				continue;
 			}
 			if (hide_older && (kern.compare_to(kern_4) < 0)){
