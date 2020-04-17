@@ -208,8 +208,7 @@ public class TerminalWindow : Gtk.Window {
 #if GLIB_LT_2_58
 		term.feed_child("%s\n".printf(command), -1);
 #else
-		string c = command.concat("\n");
-		term.feed_child(c.to_utf8());
+		term.feed_child("%s\n".printf(command).data);
 #endif
 	}
 
