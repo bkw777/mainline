@@ -654,6 +654,15 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 			if (kern.is_installed){
 				continue;
 			}
+			
+			//check if the kernel is already installed in apt and skip if
+			string std_out;
+			exec_sync("apt list --installed 2>/dev/null | grep linux-image-unsigned | cut -d / -f 1 | cut -d'-' -f 4-6", out std_out, null);
+			string version_temp = kern.version_main;
+			if (version_temp.contains(std_out))
+			{
+				continue;
+			}
 
 			//log_msg("check: %s".printf(kern.version_main));
 
