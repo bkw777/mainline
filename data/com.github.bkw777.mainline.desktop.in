@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Ubuntu Mainline Kernel Installer
 MimeType=
-Exec=mainline-gtk
+Exec=com.github.bkw777.mainline
 Type=Application
 GenericName=Ubuntu Mainline Kernel Installer
 Terminal=false

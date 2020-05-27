@@ -8,3 +8,5 @@
 *.swp
 .#*
 
+build
+builddir
