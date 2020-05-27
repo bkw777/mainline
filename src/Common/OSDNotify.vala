@@ -50,8 +50,8 @@ public class OSDNotify : GLib.Object {
 				+ " -R "+App.NOTIFICATION_ID_FILE
 				+ " -u low"
 				+ " -c info"
-				+ " -a "+BRANDING_SHORTNAME
-				+ " -i "+BRANDING_SHORTNAME
+				+ " -a "+Constants.PROJECT_NAME
+				+ " -i "+Constants.PROJECT_NAME
 				+ " -t 0"
 				+ " -f ";
 

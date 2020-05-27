@@ -40,7 +40,7 @@ public class AppGtk : GLib.Object {
 		
 		set_locale();
 
-		log_msg("%s %s".printf(BRANDING_SHORTNAME, BRANDING_VERSION));
+		log_msg("%s %s".printf(Constants.BRANDING_SHORTNAME, Constants.BRANDING_VERSION));
 
 		Gtk.init(ref args);
 
@@ -76,10 +76,10 @@ public class AppGtk : GLib.Object {
 	}
 
 	private static void set_locale() {
-		Intl.setlocale(GLib.LocaleCategory.MESSAGES, BRANDING_SHORTNAME);
-		Intl.textdomain(BRANDING_SHORTNAME);
-		Intl.bind_textdomain_codeset(BRANDING_SHORTNAME, "utf-8");
-		Intl.bindtextdomain(BRANDING_SHORTNAME, LOCALE_DIR);
+		Intl.setlocale(GLib.LocaleCategory.MESSAGES, Constants.BRANDING_SHORTNAME);
+		Intl.textdomain(Constants.BRANDING_SHORTNAME);
+		Intl.bind_textdomain_codeset(Constants.BRANDING_SHORTNAME, "utf-8");
+		Intl.bindtextdomain(Constants.BRANDING_SHORTNAME, LOCALE_DIR);
 	}
 
 	public static bool parse_arguments(string[] args) {
@@ -144,9 +144,9 @@ public class AppGtk : GLib.Object {
 
 	public static string help_message() {
 		
-		string msg = "\n" + BRANDING_SHORTNAME + " " + BRANDING_VERSION + " - " + BRANDING_LONGNAME + "\n";
+		string msg = "\n" + Constants.BRANDING_SHORTNAME + " " + Constants.BRANDING_VERSION + " - " + Constants.BRANDING_LONGNAME + "\n";
 		msg += "\n";
-		msg += _("Syntax") + ": " + BRANDING_SHORTNAME + "-gtk [options]\n";
+		msg += _("Syntax") + ": " + Constants.BRANDING_SHORTNAME + "-gtk [options]\n";
 		msg += "\n";
 		msg += _("Options") + ":\n";
 		msg += "\n";

@@ -176,7 +176,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		split_version_string(kver, out version_main);
 
 		// set page URI -----------
-		page_uri = "%s%s".printf(URI_KERNEL_UBUNTU_MAINLINE, _name);
+		page_uri = "%s%s".printf(Constants.URI_KERNEL_UBUNTU_MAINLINE, _name);
 
 		// override is_mainline from split_version_string()
 		is_mainline = _is_mainline;
@@ -333,7 +333,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		dir_create(file_parent(index_page));
 		file_delete(index_page);
 
-		var item = new DownloadItem(URI_KERNEL_UBUNTU_MAINLINE, CACHE_DIR, "index.html");
+		var item = new DownloadItem(Constants.URI_KERNEL_UBUNTU_MAINLINE, CACHE_DIR, "index.html");
 		var mgr = new DownloadTask();
 		mgr.add_to_queue(item);
 		mgr.status_in_kb = true;

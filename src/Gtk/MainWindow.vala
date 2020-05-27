@@ -55,7 +55,7 @@ public class MainWindow : Gtk.Window{
 
 	public MainWindow() {
 
-		title = BRANDING_LONGNAME;
+		title = Constants.BRANDING_LONGNAME;
 		window_position = WindowPosition.CENTER;
 		icon = get_app_icon(16);
 
@@ -242,9 +242,9 @@ public class MainWindow : Gtk.Window{
 		Gdk.Pixbuf pix_mainline_rc = null;
 
 		try {
-			pix_ubuntu = new Gdk.Pixbuf.from_file (INSTALL_PREFIX + "/share/pixmaps/" + BRANDING_SHORTNAME + "/ubuntu-logo.png");
-			pix_mainline = new Gdk.Pixbuf.from_file (INSTALL_PREFIX + "/share/pixmaps/" + BRANDING_SHORTNAME + "/tux.png");
-			pix_mainline_rc = new Gdk.Pixbuf.from_file (INSTALL_PREFIX + "/share/pixmaps/" + BRANDING_SHORTNAME + "/tux-red.png");
+			pix_ubuntu = new Gdk.Pixbuf.from_file (Constants.INSTALL_PREFIX + "/share/pixmaps/" + Constants.BRANDING_SHORTNAME + "/ubuntu-logo.png");
+			pix_mainline = new Gdk.Pixbuf.from_file (Constants.INSTALL_PREFIX + "/share/pixmaps/" + Constants.BRANDING_SHORTNAME + "/tux.png");
+			pix_mainline_rc = new Gdk.Pixbuf.from_file (Constants.INSTALL_PREFIX + "/share/pixmaps/" + Constants.BRANDING_SHORTNAME + "/tux-red.png");
 		}
 		catch (Error e) {
 			log_error (e.message);
@@ -376,7 +376,7 @@ public class MainWindow : Gtk.Window{
 					names += "%s".printf(kern.version_main);
 				}
 
-				string sh = BRANDING_SHORTNAME;
+				string sh = Constants.BRANDING_SHORTNAME;
 				if (LOG_DEBUG) sh += " --debug";
 				sh += " --remove %s\n".printf(names)
 				+ "echo \n"
@@ -411,7 +411,7 @@ public class MainWindow : Gtk.Window{
 				tv_refresh();
 			});
 
-			string sh = BRANDING_SHORTNAME+" --purge-old-kernels";
+			string sh = Constants.BRANDING_SHORTNAME+" --purge-old-kernels";
 			if (LOG_DEBUG) sh += " --debug";
 			sh += "\necho \n"
 			+ "echo '"+_("Close window to exit...")+"'\n";
@@ -467,7 +467,7 @@ public class MainWindow : Gtk.Window{
 		// FIXME - this should come from the AUTHORS file, or from git
 		dialog.authors = {
 			"Tony George <teejeetech@gmail.com>",
-			BRANDING_AUTHORNAME+" <"+BRANDING_AUTHOREMAIL+">"
+			Constants.BRANDING_AUTHORNAME+" <"+Constants.BRANDING_AUTHOREMAIL+">"
 		};
 
 		// FIXME - generate this list from the .po files
@@ -496,15 +496,15 @@ public class MainWindow : Gtk.Window{
 		dialog.documenters = null;
 		dialog.artists = null;
 
-		dialog.program_name = BRANDING_LONGNAME;
+		dialog.program_name = Constants.BRANDING_LONGNAME;
 		dialog.comments = _("Kernel upgrade utility for Ubuntu-based distributions");
-		dialog.copyright = _("Original")+": \"ukuu\" © 2015-18 Tony George\n"+_("Forked")+": \""+BRANDING_SHORTNAME+"\" 2019 "+BRANDING_AUTHORNAME+" ("+BRANDING_AUTHOREMAIL+")";
-		dialog.version = BRANDING_VERSION;
+		dialog.copyright = _("Original")+": \"ukuu\" © 2015-18 Tony George\n"+_("Forked")+": \""+Constants.BRANDING_SHORTNAME+"\" 2019 "+Constants.BRANDING_AUTHORNAME+" ("+Constants.BRANDING_AUTHOREMAIL+")";
+		dialog.version = Constants.BRANDING_VERSION;
 		dialog.logo = get_app_icon(128);
 
 		dialog.license = "This program is free for personal and commercial use and comes with absolutely no warranty. You use this program entirely at your own risk. The author will not be liable for any damages arising from the use of this program.";
-		dialog.website = BRANDING_WEBSITE;
-		dialog.website_label = BRANDING_WEBSITE;
+		dialog.website = Constants.BRANDING_WEBSITE;
+		dialog.website_label = Constants.BRANDING_WEBSITE;
 
 		dialog.third_party = {
 			"Elementary project (various icons):github.com/elementary/icons",
@@ -677,7 +677,7 @@ public class MainWindow : Gtk.Window{
 			}
 		});
 
-		string sh = BRANDING_SHORTNAME;
+		string sh = Constants.BRANDING_SHORTNAME;
 		if (LOG_DEBUG) sh += " --debug";
 		sh += " --install %s\n".printf(kern.version_main)
 		+ "echo \n"

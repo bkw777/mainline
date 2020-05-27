@@ -1,0 +1,17 @@
+namespace Constants {
+    public const string GETTEXT_PACKAGE = @GETTEXT_PACKAGE@;
+    public const string PROJECT_NAME = @PROJECT_NAME@;
+    public const string VERSION = @VERSION@;
+    public const string PREFIX = @PREFIX@;
+    public const string DATADIR = @DATADIR@;
+
+    public const string BRANDING_LONGNAME = @BRANDING_LONGNAME@;
+    public const string BRANDING_SHORTNAME = @BRANDING_SHORTNAME@;
+    public const string URI_KERNEL_UBUNTU_MAINLINE = @URI_KERNEL_UBUNTU_MAINLINE@;
+    public const string DEFAULT_SHOW_PREV_MAJORS = @DEFAULT_SHOW_PREV_MAJORS@;
+    public const string INSTALL_PREFIX = @INSTALL_PREFIX@;
+    public const string BRANDING_VERSION = @BRANDING_VERSION@;
+    public const string BRANDING_AUTHORNAME = @BRANDING_AUTHORNAME@;
+    public const string BRANDING_AUTHOREMAIL = @BRANDING_AUTHOREMAIL@;
+    public const string BRANDING_WEBSITE = @BRANDING_WEBSITE@;
+}

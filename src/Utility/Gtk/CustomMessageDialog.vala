@@ -79,7 +79,7 @@ public class CustomMessageDialog : Gtk.Dialog {
 
 	public void init_window () {
 
-		this.title = BRANDING_LONGNAME;
+		this.title = Constants.BRANDING_LONGNAME;
 		this.window_position = WindowPosition.CENTER_ON_PARENT;
 		this.icon = get_app_icon(16);
 		this.resizable = false;
