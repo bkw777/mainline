@@ -35,9 +35,9 @@ conf_data.set_quoted('URI_KERNEL_UBUNTU_MAINLINE', 'http://kernel.ubuntu.com/~ke
 conf_data.set_quoted('INSTALL_PREFIX', get_option('prefix'))
 conf_data.set_quoted('DEFAULT_SHOW_PREV_MAJORS', '0')
 conf_data.set_quoted('BRANDING_VERSION', meson.project_version())
-conf_data.set_quoted('BRANDING_AUTHORNAME', 'test author name')
-conf_data.set_quoted('BRANDING_AUTHOREMAIL', 'test@mail.com')
-conf_data.set_quoted('BRANDING_WEBSITE', 'www.mainline.com')
+conf_data.set_quoted('BRANDING_AUTHORNAME', 'Brian K. White')
+conf_data.set_quoted('BRANDING_AUTHOREMAIL', 'b.kenyon.w@gmail.com')
+conf_data.set_quoted('BRANDING_WEBSITE', 'https://github.com/bkw777/mainline')
 
 config_header = configure_file(
     input : 'config.vala.in',
