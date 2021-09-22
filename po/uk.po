@@ -34,12 +34,10 @@ msgid "Could not find running kernel in list!"
 msgstr "Не вдалося знайти запущене ядро у списку!"
 
 #: src/Common/LinuxKernel.vala:600
-#, fuzzy
 msgid "Could not find any kernels to uninstall"
 msgstr "Не вдалося знайти жодне ядро для вилучення"
 
 #: src/Common/LinuxKernel.vala:609
-#, fuzzy
 msgid "The following kernels will be uninstalled:"
 msgstr "Наступні ядра будуть видалені:"
 
@@ -63,7 +61,7 @@ msgstr "Оновлень не знайдено"
 #: src/Common/LinuxKernel.vala:671
 #, fuzzy, c-format
 msgid "Install Kernel Version %s ? (y/n): "
-msgstr "Встановити Linux v% s? (так/ні): "
+msgstr "Встановити Linux v%s ? (так/ні): "
 
 #: src/Common/LinuxKernel.vala:909
 msgid "Packages Available"
@@ -114,16 +112,14 @@ msgid "Installation completed with errors"
 msgstr "Установка завершена з помилками"
 
 #: src/Common/LinuxKernel.vala:1124
-#, fuzzy
 msgid ""
 "Selected kernel is currently running and cannot be un-installed.\n"
 " Install another kernel before un-installing this one."
 msgstr ""
-"Це ядро зараз працює і не може бути видалено. \n"
+"Це ядро зараз працює і не може бути видалено.\n"
 "Встановіть інше ядро, перш ніж видаляти його."
 
 #: src/Common/LinuxKernel.vala:1129
-#, fuzzy
 msgid "Preparing to uninstall selected kernels"
 msgstr "Підготовка до видалення вибраних ядер"
 
@@ -136,7 +132,6 @@ msgid "Un-install completed with errors"
 msgstr "Видалення завершено з помилками"
 
 #: src/Common/LinuxKernel.vala:1176
-#, fuzzy
 msgid ""
 "This kernel is currently running and cannot be un-installed.\n"
 " Install another kernel before un-installing this one."
@@ -149,7 +144,6 @@ msgid "Called from"
 msgstr "Викликано з"
 
 #: src/Common/Main.vala:275
-#, fuzzy
 msgid "Notifications are disabled"
 msgstr "Повідомлення вимкнено"
 
@@ -195,17 +189,16 @@ msgid "Install specified mainline kernel"
 msgstr "Встановіть конкретне основне ядро"
 
 #: src/Console/AppConsole.vala:73
-#, fuzzy
 msgid "Uninstall specified kernel"
 msgstr "Видаліть конкретні ядра"
 
 #: src/Console/AppConsole.vala:74
-#, fuzzy
 msgid "Uninstall kernels older than the running kernel"
-msgstr "Видаліть встановлені ядра, старші за запущене ядро"
+msgstr ""
+"Видаліть встановлені ядра,\n"
+"старші за запущене ядро"
 
 #: src/Console/AppConsole.vala:75
-#, fuzzy
 msgid "Download specified kernels"
 msgstr "Завантажте конкретні ядра"
 
@@ -218,7 +211,6 @@ msgid "Options"
 msgstr "Параметри"
 
 #: src/Console/AppConsole.vala:80
-#, fuzzy
 msgid "Include unstable and RC releases"
 msgstr "Приховати нестабільні і реліз-кандидат версії"
 
@@ -243,7 +235,6 @@ msgid "A version string taken from the output of --list"
 msgstr "Рядок версій, взятий з виводу --list"
 
 #: src/Console/AppConsole.vala:88
-#, fuzzy
 msgid ""
 "One or more version strings (comma-separated) taken from the output of --list"
 msgstr ""
@@ -255,12 +246,10 @@ msgstr "Невідомий параметр"
 
 #: src/Console/AppConsole.vala:171 src/Console/AppConsole.vala:265
 #: src/Console/AppConsole.vala:294
-#, fuzzy
 msgid "Run"
 msgstr "Запуск"
 
 #: src/Console/AppConsole.vala:171
-#, fuzzy
 msgid "to list all options"
 msgstr "Показати усі параметри"
 
@@ -285,7 +274,6 @@ msgid "Command not specified"
 msgstr "Команда не вказана"
 
 #: src/Console/AppConsole.vala:294
-#, fuzzy
 msgid "to list all commands"
 msgstr "щоб відобразити всі команди"
 
@@ -294,7 +282,6 @@ msgid "Show"
 msgstr "Показати"
 
 #: src/Console/AppConsole.vala:365 src/Console/AppConsole.vala:377
-#, fuzzy, c-format
 msgid "Kernel %s Available"
 msgstr "Доступне ядро %s"
 
@@ -349,12 +336,10 @@ msgid "Select the kernel to install"
 msgstr "Виберіть ядро для встановлення"
 
 #: src/Gtk/MainWindow.vala:347
-#, fuzzy
 msgid "Uninstall"
 msgstr "Видалити"
 
 #: src/Gtk/MainWindow.vala:353
-#, fuzzy
 msgid "Select the kernels to uninstall"
 msgstr "Виберіть ядро для встановлення"
 
@@ -364,14 +349,16 @@ msgid "Close window to exit..."
 msgstr "Закрийте вікно, щоб вийти..."
 
 #: src/Gtk/MainWindow.vala:391
-#, fuzzy
 msgid "Uninstall Old"
-msgstr "Видалити встановлені ядра старіші за встановлене ядро"
+msgstr ""
+"Видалити встановлені ядра,\n"
+"старіші за встановлене ядро"
 
 #: src/Gtk/MainWindow.vala:392
-#, fuzzy
 msgid "Uninstall kernels older than running kernel"
-msgstr "Видалити встановлені ядра, старіші за запущене ядро"
+msgstr ""
+"Видалити встановлені ядра,\n"
+"старіші за запущене ядро"
 
 #: src/Gtk/MainWindow.vala:424
 msgid "Changes"
@@ -390,17 +377,14 @@ msgid "Kernel upgrade utility for Ubuntu-based distributions"
 msgstr "Програма оновлення ядра для дистрибутивів на базі Ubuntu"
 
 #: src/Gtk/MainWindow.vala:504
-#, fuzzy
 msgid "Forked"
 msgstr "Роздвоєний"
 
 #: src/Gtk/MainWindow.vala:504
-#, fuzzy
 msgid "Original"
 msgstr "Оригінальний"
 
 #: src/Gtk/MainWindow.vala:525 src/Gtk/MainWindow.vala:655
-#, fuzzy
 msgid "Internet connection is not active."
 msgstr "Інтернет з'єднання не активно"
 
@@ -409,12 +393,10 @@ msgid "Refreshing..."
 msgstr "Оновлення..."
 
 #: src/Gtk/MainWindow.vala:638
-#, fuzzy
 msgid "available"
 msgstr "доступний"
 
 #: src/Gtk/MainWindow.vala:650
-#, fuzzy
 msgid "Already Installed"
 msgstr "Вже встановлено"
 
@@ -456,7 +438,6 @@ msgid "Week(s)"
 msgstr "Тиждень(ні)"
 
 #: src/Gtk/SettingsDialog.vala:149
-#, fuzzy
 msgid "Second(s)"
 msgstr "Секунда(и)"
 
@@ -521,7 +502,6 @@ msgid "Documenters"
 msgstr "Документатори"
 
 #: src/Utility/Gtk/AboutWindow.vala:353
-#, fuzzy
 msgid "Third Party Inclusions"
 msgstr "Інструменти Сторонніх Розробників"
 
@@ -538,12 +518,10 @@ msgid "Missing Icon"
 msgstr "Нема значка"
 
 #: src/Utility/TeeJee.FileSystem.vala:71
-#, fuzzy
 msgid "File deleted"
 msgstr "Файл збережено"
 
 #: src/Utility/TeeJee.FileSystem.vala:76 src/Utility/TeeJee.FileSystem.vala:256
-#, fuzzy
 msgid "Failed to delete file"
 msgstr "Невдалося записати файл"
 
