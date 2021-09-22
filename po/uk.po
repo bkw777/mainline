@@ -61,7 +61,7 @@ msgstr "Оновлень не знайдено"
 #: src/Common/LinuxKernel.vala:671
 #, fuzzy, c-format
 msgid "Install Kernel Version %s ? (y/n): "
-msgstr "Встановити Linux v%s ? (так/ні): "
+msgstr "Встановити Ядро Версії %s ? (так/ні): "
 
 #: src/Common/LinuxKernel.vala:909
 msgid "Packages Available"
@@ -350,15 +350,11 @@ msgstr "Закрийте вікно, щоб вийти..."
 
 #: src/Gtk/MainWindow.vala:391
 msgid "Uninstall Old"
-msgstr ""
-"Видалити встановлені ядра,\n"
-"старіші за встановлене ядро"
+msgstr "Видалити старіші за встановлене ядро"
 
 #: src/Gtk/MainWindow.vala:392
 msgid "Uninstall kernels older than running kernel"
-msgstr ""
-"Видалити встановлені ядра,\n"
-"старіші за запущене ядро"
+msgstr "Видалити старіші за запущене ядро"
 
 #: src/Gtk/MainWindow.vala:424
 msgid "Changes"
