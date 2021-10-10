@@ -123,6 +123,8 @@ install: all
 	done
 	install -m 0755 $(BRANDING_SHORTNAME) "$(DESTDIR)$(bindir)"
 	install -m 0755 $(BRANDING_SHORTNAME)-gtk "$(DESTDIR)$(bindir)"
+        install -m 0755 deblibcver "$(DESTDIR)$(bindir)"
+
 
 .PHONY: uninstall
 uninstall:
@@ -136,6 +138,8 @@ uninstall:
 	rm -f $(DESTDIR)$(localedir)/*/LC_MESSAGES/$(BRANDING_SHORTNAME).mo
 	rm -f $(DESTDIR)/home/*/.config/$(BRANDING_SHORTNAME)/$(BRANDING_SHORTNAME)-notify.sh
 	rm -f $(DESTDIR)/home/*/.config/autostart/$(BRANDING_SHORTNAME).desktop
+	rm -f $(DESTDIR)$(bindir)/deblibcver
+
 
 .PHONY: deb-src
 deb-src: $(dsc_file)
