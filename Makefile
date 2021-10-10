@@ -123,7 +123,7 @@ install: all
 	done
 	install -m 0755 $(BRANDING_SHORTNAME) "$(DESTDIR)$(bindir)"
 	install -m 0755 $(BRANDING_SHORTNAME)-gtk "$(DESTDIR)$(bindir)"
-        install -m 0755 deblibcver "$(DESTDIR)$(bindir)"
+	install -m 0755 deblibcver "$(DESTDIR)$(bindir)"
 
 
 .PHONY: uninstall
