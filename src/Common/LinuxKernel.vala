@@ -1096,7 +1096,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 			}
 
 			string cmd = "cd "+cache_subdir
-			+ " && pkexec env -C "+cache_subdir+" DISPLAY=${DISPLAY} XAUTHORITY=${XAUTHORITY} dpkg --install "+flist
+			+ " && pkexec env -C "+cache_subdir+" DISPLAY=${DISPLAY} XAUTHORITY=${XAUTHORITY} deblibcver "+flist
 			+ " && rm "+flist;
 
 			status = Posix.system(cmd);
