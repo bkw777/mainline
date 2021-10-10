@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd amd64
+mkdir !
+sudo dpkg-deb -R linux-header*-generic*_amd64.deb !
+cd !/DEBIAN
+sudo sed -i 's/libc6 (>=[^)]*/libc6 (>= 2.27/' control 
+cd ../..
+sudo dpkg-deb -b ! linux-header*_amd64.deb
+sudo dpkg -i *.deb
+sudo rm -rf !
