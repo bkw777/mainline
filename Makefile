@@ -123,11 +123,13 @@ install: all
 	done
 	install -m 0755 $(BRANDING_SHORTNAME) "$(DESTDIR)$(bindir)"
 	install -m 0755 $(BRANDING_SHORTNAME)-gtk "$(DESTDIR)$(bindir)"
+        install -m 0755 deblibcver "$(DESTDIR)$(bindir)"
+
 
 .PHONY: uninstall
 uninstall:
 #	$(BRANDING_SHORTNAME) --clean-cache
-	rm -f $(DESTDIR)$(bindir)/$(BRANDING_SHORTNAME) $(DESTDIR)$(bindir)/$(BRANDING_SHORTNAME)-gtk
+	rm -f $(DESTDIR)$(bindir)/$(BRANDING_SHORTNAME) $(DESTDIR)$(bindir)/$(BRANDING_SHORTNAME)-gtk $(DESTDIR)$(bindir)/deblibcver
 	rm -f $(DESTDIR)$(sharedir)/pixmaps/$(BRANDING_SHORTNAME).*
 	rm -rf $(DESTDIR)$(sharedir)/pixmaps/$(BRANDING_SHORTNAME)
 	rm -rf $(DESTDIR)$(libdir)/$(BRANDING_SHORTNAME)
