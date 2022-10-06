@@ -44,6 +44,7 @@ public class MainWindow : Gtk.Window{
 	private Gtk.Button btn_uninstall_old;
 	private Gtk.Button btn_changes;
 	private Gtk.Label lbl_info;
+	private Gtk.Button btn_select;	
 
 	// helper members
 
@@ -418,6 +419,25 @@ public class MainWindow : Gtk.Window{
 
 			save_bash_script_temp(sh,t_file);
 			term.execute_script(t_file,t_dir);
+		});
+
+		// select
+		button = new Gtk.Button.with_label (_("Boot Select"));
+		button.set_tooltip_text(_("Select the kernel to boot"));
+		hbox.pack_start (button, true, true, 0);
+		btn_select = button;
+
+		button.clicked.connect(() => {
+
+			try {
+				string standard_output, standard_error;
+				int exit_status;
+				Process.spawn_command_line_sync ("/usr/local/bin/boot-select", out standard_output,
+													   						   out standard_error,
+													   						   out exit_status);
+			} catch (SpawnError e) {
+				stderr.printf ("%s\n", e.message);
+			}
 		});
 
 		// changes

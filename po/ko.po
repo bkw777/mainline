@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline 1.0.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-08 04:23-0400\n"
+"POT-Creation-Date: 2022-10-06 11:51+0900\n"
 "PO-Revision-Date: 2022-09-28 11:48+0900\n"
 "Last-Translator: Kevin Kim <root@hamonikr.org>\n"
 "Language-Team: Korean\n"
@@ -64,6 +64,7 @@ msgid "No updates found"
 msgstr "업데이트를 찾을 수 없습니다"
 
 #: src/Common/LinuxKernel.vala:688
+#, c-format
 msgid "Install Kernel Version %s ? (y/n): "
 msgstr "커널 %s 버전을 설치하시겠습니까? (y/n): "
 
@@ -79,12 +80,12 @@ msgstr "설치된 패키지"
 msgid "Available Kernels"
 msgstr "설치 가능한 커널"
 
-#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:186
+#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:187
 msgid "Installed"
 msgstr "설치 됨"
 
-#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:186
-#: src/Gtk/MainWindow.vala:628 src/Gtk/MainWindow.vala:642
+#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:187
+#: src/Gtk/MainWindow.vala:648 src/Gtk/MainWindow.vala:662
 msgid "Running"
 msgstr "구동 중"
 
@@ -102,7 +103,7 @@ msgstr "확인"
 msgid "ERROR"
 msgstr "오류"
 
-#: src/Common/LinuxKernel.vala:1096 src/Gtk/MainWindow.vala:650
+#: src/Common/LinuxKernel.vala:1096 src/Gtk/MainWindow.vala:670
 msgid "This kernel is already installed."
 msgstr "이 커널은 이미 설치되었습니다."
 
@@ -151,6 +152,7 @@ msgid "Notifications are disabled"
 msgstr "알림이 비활성화 되었습니다"
 
 #: src/Common/Package.vala:134 src/Common/Package.vala:198
+#, c-format
 msgid "File not found: %s"
 msgstr "%s 파일을 찾을 수 없습니다"
 
@@ -235,7 +237,8 @@ msgid "A version string taken from the output of --list"
 msgstr "--list 의 출력에서 가져온 버전 문자열"
 
 #: src/Console/AppConsole.vala:88
-msgid "One or more version strings (comma-separated) taken from the output of --list"
+msgid ""
+"One or more version strings (comma-separated) taken from the output of --list"
 msgstr "--list 의 출력에서 가져온 하나 이상의 버전 문자열 (쉼표로 구분)"
 
 #: src/Console/AppConsole.vala:169 src/Gtk/AppGtk.vala:136
@@ -259,7 +262,7 @@ msgstr "지정한 커널이 없습니다"
 msgid "Multiple kernels selected for installation. Select only one."
 msgstr "설치할 커널이 여러개 선택되었습니다. 하나의 커널만 선택하세요."
 
-#: src/Console/AppConsole.vala:262 src/Gtk/MainWindow.vala:100
+#: src/Console/AppConsole.vala:262 src/Gtk/MainWindow.vala:101
 msgid "Could not find requested version"
 msgstr "요청한 버전을 찾을 수 없습니다"
 
@@ -280,11 +283,12 @@ msgid "Show"
 msgstr "보이기"
 
 #: src/Console/AppConsole.vala:365 src/Console/AppConsole.vala:377
+#, c-format
 msgid "Kernel %s Available"
 msgstr "커널 %s 사용 가능"
 
 #: src/Console/AppConsole.vala:367 src/Console/AppConsole.vala:379
-#: src/Gtk/MainWindow.vala:330
+#: src/Gtk/MainWindow.vala:331
 msgid "Install"
 msgstr "설치"
 
@@ -296,101 +300,109 @@ msgstr "디버그 정보 출력"
 msgid "Show all options"
 msgstr "모든 옵션 보기"
 
-#: src/Gtk/MainWindow.vala:146
+#: src/Gtk/MainWindow.vala:147
 msgid "Kernel"
 msgstr "커널"
 
-#: src/Gtk/MainWindow.vala:174
+#: src/Gtk/MainWindow.vala:175
 msgid "Status"
 msgstr "상태"
 
-#: src/Gtk/MainWindow.vala:314
+#: src/Gtk/MainWindow.vala:315
 msgid "Refresh"
 msgstr "새로고침"
 
-#: src/Gtk/MainWindow.vala:321 src/Utility/TeeJee.System.vala:42
+#: src/Gtk/MainWindow.vala:322 src/Utility/TeeJee.System.vala:42
 msgid "Internet connection is not active"
 msgstr "인터넷 연결을 확인하세요"
 
-#: src/Gtk/MainWindow.vala:321 src/Gtk/MainWindow.vala:525
-#: src/Gtk/MainWindow.vala:655
+#: src/Gtk/MainWindow.vala:322 src/Gtk/MainWindow.vala:545
+#: src/Gtk/MainWindow.vala:675
 msgid "No Internet"
 msgstr "인터넷이 연결되지 않았습니다"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Multiple Kernels Selected"
 msgstr "다수의 커널이 선택되었습니다"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Select a single kernel to install"
 msgstr "설치할 단일 커널 선택"
 
-#: src/Gtk/MainWindow.vala:342 src/Gtk/MainWindow.vala:353
+#: src/Gtk/MainWindow.vala:343 src/Gtk/MainWindow.vala:354
 msgid "Not Selected"
 msgstr "선택하지 않음"
 
-#: src/Gtk/MainWindow.vala:342
+#: src/Gtk/MainWindow.vala:343
 msgid "Select the kernel to install"
 msgstr "설치할 커널 선택"
 
-#: src/Gtk/MainWindow.vala:347
+#: src/Gtk/MainWindow.vala:348
 msgid "Uninstall"
 msgstr "삭제"
 
-#: src/Gtk/MainWindow.vala:353
+#: src/Gtk/MainWindow.vala:354
 msgid "Select the kernels to uninstall"
 msgstr "삭제할 커널 선택"
 
-#: src/Gtk/MainWindow.vala:383 src/Gtk/MainWindow.vala:417
-#: src/Gtk/MainWindow.vala:687
+#: src/Gtk/MainWindow.vala:384 src/Gtk/MainWindow.vala:418
+#: src/Gtk/MainWindow.vala:707
 msgid "Close window to exit..."
 msgstr "창을 닫고 종료..."
 
-#: src/Gtk/MainWindow.vala:391
+#: src/Gtk/MainWindow.vala:392
 msgid "Uninstall Old"
 msgstr "오래된 커널 제거"
 
-#: src/Gtk/MainWindow.vala:392
+#: src/Gtk/MainWindow.vala:393
 msgid "Uninstall kernels older than running kernel"
 msgstr "현재 사용 중인 커널보다 이전 버전의 커널을 제거"
 
-#: src/Gtk/MainWindow.vala:424
+#: src/Gtk/MainWindow.vala:425
+msgid "Boot Select"
+msgstr "부팅 커널 선택"
+
+#: src/Gtk/MainWindow.vala:426
+msgid "Select the kernel to boot"
+msgstr "부팅할 커널 선택"
+
+#: src/Gtk/MainWindow.vala:444
 msgid "Changes"
 msgstr "변경사항"
 
-#: src/Gtk/MainWindow.vala:435 src/Gtk/SettingsDialog.vala:50
+#: src/Gtk/MainWindow.vala:455 src/Gtk/SettingsDialog.vala:50
 msgid "Settings"
 msgstr "설정"
 
-#: src/Gtk/MainWindow.vala:458
+#: src/Gtk/MainWindow.vala:478
 msgid "About"
 msgstr "정보"
 
-#: src/Gtk/MainWindow.vala:503
+#: src/Gtk/MainWindow.vala:523
 msgid "Kernel upgrade utility for Ubuntu-based distributions"
 msgstr "우분투 기반 배포판의 커널 업그레이드 도구"
 
-#: src/Gtk/MainWindow.vala:504
+#: src/Gtk/MainWindow.vala:524
 msgid "Forked"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:504
+#: src/Gtk/MainWindow.vala:524
 msgid "Original"
 msgstr ""
 
-#: src/Gtk/MainWindow.vala:525 src/Gtk/MainWindow.vala:655
+#: src/Gtk/MainWindow.vala:545 src/Gtk/MainWindow.vala:675
 msgid "Internet connection is not active."
 msgstr "인터넷 연결을 확인하세요."
 
-#: src/Gtk/MainWindow.vala:544
+#: src/Gtk/MainWindow.vala:564
 msgid "Refreshing..."
 msgstr "새로 고침..."
 
-#: src/Gtk/MainWindow.vala:638
+#: src/Gtk/MainWindow.vala:658
 msgid "available"
 msgstr "사용가능"
 
-#: src/Gtk/MainWindow.vala:650
+#: src/Gtk/MainWindow.vala:670
 msgid "Already Installed"
 msgstr "이미 설치되었습니다"
 

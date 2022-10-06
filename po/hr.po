@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-08 04:23-0400\n"
+"POT-Creation-Date: 2022-10-06 11:51+0900\n"
 "PO-Revision-Date: 2022-09-22 12:13+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -75,12 +75,12 @@ msgstr "Instalirani paketi"
 msgid "Available Kernels"
 msgstr "Dostupni kerneli"
 
-#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:186
+#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:187
 msgid "Installed"
 msgstr "Instalirano"
 
-#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:186
-#: src/Gtk/MainWindow.vala:628 src/Gtk/MainWindow.vala:642
+#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:187
+#: src/Gtk/MainWindow.vala:648 src/Gtk/MainWindow.vala:662
 msgid "Running"
 msgstr "Pokrenuto"
 
@@ -98,7 +98,7 @@ msgstr "U redu"
 msgid "ERROR"
 msgstr "GREŠKA"
 
-#: src/Common/LinuxKernel.vala:1096 src/Gtk/MainWindow.vala:650
+#: src/Common/LinuxKernel.vala:1096 src/Gtk/MainWindow.vala:670
 msgid "This kernel is already installed."
 msgstr "Ovaj kernel je već instaliran."
 
@@ -260,7 +260,7 @@ msgstr "Nema određenih kernela"
 msgid "Multiple kernels selected for installation. Select only one."
 msgstr "Više kernela je odabrano za instalaciju. odaberite samo jedan."
 
-#: src/Console/AppConsole.vala:262 src/Gtk/MainWindow.vala:100
+#: src/Console/AppConsole.vala:262 src/Gtk/MainWindow.vala:101
 msgid "Could not find requested version"
 msgstr "Nemoguće je pronaći zatraženu inačicu"
 
@@ -286,7 +286,7 @@ msgid "Kernel %s Available"
 msgstr "Kernel %s je dostupan"
 
 #: src/Console/AppConsole.vala:367 src/Console/AppConsole.vala:379
-#: src/Gtk/MainWindow.vala:330
+#: src/Gtk/MainWindow.vala:331
 msgid "Install"
 msgstr "Instaliraj"
 
@@ -298,101 +298,111 @@ msgstr "Ispiši informacije otklanjanja grešaka"
 msgid "Show all options"
 msgstr "Prikaži sve mogućnosti"
 
-#: src/Gtk/MainWindow.vala:146
+#: src/Gtk/MainWindow.vala:147
 msgid "Kernel"
 msgstr "Kernel"
 
-#: src/Gtk/MainWindow.vala:174
+#: src/Gtk/MainWindow.vala:175
 msgid "Status"
 msgstr "Stanje"
 
-#: src/Gtk/MainWindow.vala:314
+#: src/Gtk/MainWindow.vala:315
 msgid "Refresh"
 msgstr "Osvježi"
 
-#: src/Gtk/MainWindow.vala:321 src/Utility/TeeJee.System.vala:42
+#: src/Gtk/MainWindow.vala:322 src/Utility/TeeJee.System.vala:42
 msgid "Internet connection is not active"
 msgstr "Internet povezivanje nije aktivno"
 
-#: src/Gtk/MainWindow.vala:321 src/Gtk/MainWindow.vala:525
-#: src/Gtk/MainWindow.vala:655
+#: src/Gtk/MainWindow.vala:322 src/Gtk/MainWindow.vala:545
+#: src/Gtk/MainWindow.vala:675
 msgid "No Internet"
 msgstr "Nema pristupa internetu"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Multiple Kernels Selected"
 msgstr "Više kernela je odabrano"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Select a single kernel to install"
 msgstr "Odaberi pojedni kernel za instalaciju"
 
-#: src/Gtk/MainWindow.vala:342 src/Gtk/MainWindow.vala:353
+#: src/Gtk/MainWindow.vala:343 src/Gtk/MainWindow.vala:354
 msgid "Not Selected"
 msgstr "Nije odabrano"
 
-#: src/Gtk/MainWindow.vala:342
+#: src/Gtk/MainWindow.vala:343
 msgid "Select the kernel to install"
 msgstr "Odaberi kernel za instalaciju"
 
-#: src/Gtk/MainWindow.vala:347
+#: src/Gtk/MainWindow.vala:348
 msgid "Uninstall"
 msgstr "Deinstaliraj"
 
-#: src/Gtk/MainWindow.vala:353
+#: src/Gtk/MainWindow.vala:354
 msgid "Select the kernels to uninstall"
 msgstr "Odaberi kernel za deinstalaciju"
 
-#: src/Gtk/MainWindow.vala:383 src/Gtk/MainWindow.vala:417
-#: src/Gtk/MainWindow.vala:687
+#: src/Gtk/MainWindow.vala:384 src/Gtk/MainWindow.vala:418
+#: src/Gtk/MainWindow.vala:707
 msgid "Close window to exit..."
 msgstr "Zatvori prozor i izađi..."
 
-#: src/Gtk/MainWindow.vala:391
+#: src/Gtk/MainWindow.vala:392
 msgid "Uninstall Old"
 msgstr "Deinstaliraj staro"
 
-#: src/Gtk/MainWindow.vala:392
+#: src/Gtk/MainWindow.vala:393
 msgid "Uninstall kernels older than running kernel"
 msgstr "Deinstaliraj kernele starije od pokrenutog krenela"
 
-#: src/Gtk/MainWindow.vala:424
+#: src/Gtk/MainWindow.vala:425
+#, fuzzy
+msgid "Boot Select"
+msgstr "Nije odabrano"
+
+#: src/Gtk/MainWindow.vala:426
+#, fuzzy
+msgid "Select the kernel to boot"
+msgstr "Odaberi kernel za instalaciju"
+
+#: src/Gtk/MainWindow.vala:444
 msgid "Changes"
 msgstr "Promjene"
 
-#: src/Gtk/MainWindow.vala:435 src/Gtk/SettingsDialog.vala:50
+#: src/Gtk/MainWindow.vala:455 src/Gtk/SettingsDialog.vala:50
 msgid "Settings"
 msgstr "Postavke"
 
-#: src/Gtk/MainWindow.vala:458
+#: src/Gtk/MainWindow.vala:478
 msgid "About"
 msgstr "O programu"
 
-#: src/Gtk/MainWindow.vala:503
+#: src/Gtk/MainWindow.vala:523
 msgid "Kernel upgrade utility for Ubuntu-based distributions"
 msgstr "Alat za nadogradnju kernela Ubuntu temeljenih distribucija"
 
-#: src/Gtk/MainWindow.vala:504
+#: src/Gtk/MainWindow.vala:524
 msgid "Forked"
 msgstr "Forkano"
 
-#: src/Gtk/MainWindow.vala:504
+#: src/Gtk/MainWindow.vala:524
 msgid "Original"
 msgstr "Izvornik"
 
-#: src/Gtk/MainWindow.vala:525 src/Gtk/MainWindow.vala:655
+#: src/Gtk/MainWindow.vala:545 src/Gtk/MainWindow.vala:675
 msgid "Internet connection is not active."
 msgstr "Internet povezivanje nije aktivno."
 
-#: src/Gtk/MainWindow.vala:544
+#: src/Gtk/MainWindow.vala:564
 msgid "Refreshing..."
 msgstr "Osvježavanje..."
 
-#: src/Gtk/MainWindow.vala:638
+#: src/Gtk/MainWindow.vala:658
 msgid "available"
 msgstr "dostupno"
 
-#: src/Gtk/MainWindow.vala:650
+#: src/Gtk/MainWindow.vala:670
 msgid "Already Installed"
 msgstr "Već instalirano"
 

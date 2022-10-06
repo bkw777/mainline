@@ -8,7 +8,7 @@ Homepage: https://github.com/bkw777/mainline
 
 Package: mainline
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, aptitude, aria2, lsb-release
+Depends: ${shlibs:Depends}, ${misc:Depends}, aptitude, aria2, lsb-release, , boot-select
 Recommends:
 Description: Kernel Update Utility for Ubuntu-based distributions
  Utility for installing mainline Linux kernels on Ubuntu-based distributions.

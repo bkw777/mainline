@@ -1,66 +1,73 @@
-### Ubuntu Mainline Kernel Installer
-A tool for installing the latest Linux kernels on Ubuntu-based distributions.
+## mainline 우분투 커널 업그레이드 도구
 
-![Main window screenshot](main_window.png)
+이 프로그램은 `sudo apt upgrade` 를 통해 제공되지 않는 특정 버전 또는 최신 버전의 우분투 커널을 사용하고 싶은 경우
 
-### Features
-* Fetches the list of available kernels from the [Ubuntu Mainline PPA](http://kernel.ubuntu.com/~kernel-ppa/mainline/)
-* Optionally watches and displays notifications when a new kernel update is available
-* Downloads and installs packages automatically
-* Display available and installed kernels conveniently
-* Install/Uninstall kernels from gui
-* For each kernel, the related packages (headers & modules) are installed or uninstalled at the same time
+터미널을 사용하지 않고 GUI 를 통한 손쉬운 커널 업그레이드를 제공하는 프로그램 입니다.
 
-### Install
-Minimal .deb packages are in [releases](../../releases/latest). (Usually just a single deb for any given release).
+이 프로그램을 사용하면 누구나 쉽게 자신의 시스템 커널을 업그레이드 하거나 삭제할 수 있습니다.
 
-Better: [cappelikan](https://github.com/cappelikan) maintains a [PPA](https://code.launchpad.net/~cappelikan/+archive/ubuntu/ppa)
+주의) 커널을 업그레이드 하면 시스템의 하드웨어가 정상적으로 동작하지 않을 수 있습니다.
+
+ * upstream : https://github.com/bkw777/mainline
+ * latest version : 1.0.16
+
+Support OS : Linux OS based on Ubuntu(HamoniKR, Kubuntu, Lubuntu, LinuxMint...) 
+
+### 스크린샷
+![Main window screenshot](imgs/main_window_ko.png)
+
+### 부팅 시 사용될 커널을 설정할 수 있는 기능 제공
+
+![boot-select screenshot](imgs/main_window_ko_1.png)
+
+## 프로그램 설치
+
+### 하모니카 사용자 (하모니카 3.0 이상)
+
 ```
-sudo add-apt-repository ppa:cappelikan/ppa
 sudo apt update
 sudo apt install mainline
 ```
 
-### Build
+### Ubuntu, LinuxMint 등 다른 배포판 사용자의 경우
+
+터미널을 열고(Ctrl+Alt+T) 아래 명령어를 입력하세요.
 ```
-sudo apt install libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude make gettext dpkg-dev
-git clone https://github.com/bkw777/mainline.git
+# 하모니카 APT 저장소 추가 (우분투 22.04 이상)
+wget -qO- https://repo.hamonikr.org/hamonikr-app.apt | sudo -E bash -
+
+# 하모니카 APT 저장소 추가 (우분투 21.04 이하)
+curl -sL https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
+```
+
+```
+# 프로그램 설치
+sudo apt install mainline
+```
+
+## build
+
+### Build & Test
+
+```
+sudo apt install libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude
+
+git clone https://github.com/hamonikr/mainline.git
+
 cd mainline
 make
 sudo make install
 ```
 
-### Usage
-Look for System -> Ubuntu Mainline Kernel Installer in your desktop's Applications/Start menu.
+### uninstall
 
-Otherwise:  
-CLI
 ```
-mainline --help
-mainline
-```
-GUI
-```
-mainline-gtk
+sudo make uninstall
 ```
 
 ### About
-Written using Vala and GTK3.
 
-mainline is a fork of [ukuu](https://github.com/teejee2008/ukuu)  
+mainline is a fork of [ukuu](https://github.com/teejee2008/ukuu)
+
 The original author stopped maintaining the original GPL version of ukuu and switched to a [paid license](https://teejeetech.in/tag/ukuu/) for future versions.
 
-### Enhancements / Deviations from the original author's final GPL version
-* (from [stevenpowerd](https://github.com/stevenpowered/ukuu)) Options controlling the internet connection check
-* (from [cloyce](https://github.com/cloyce/ukuu)) Option to include or hide pre-release kernels
-* Changed name from "ukuu" to "mainline"
-* Removed all GRUB options
-* Removed all donate buttons, links, dialogs
-* Remove source cruft
-* Better temp and cache directory behavior
-* Better desktop notification behavior
-
-### TODO & WIP
-* Make the notification bg process detect when the user logs off and exit itself.
-* Save & restore window dimensions.
-* Move the notification/dbus code into the app and make an "applet mode"

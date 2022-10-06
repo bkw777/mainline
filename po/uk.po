@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-08 04:23-0400\n"
+"POT-Creation-Date: 2022-10-06 11:51+0900\n"
 "PO-Revision-Date: 2019-07-25 11:00+0300\n"
 "Last-Translator: Serhii Golovko <cappelikan@gmail.com>\n"
 "Language-Team: Ukranian <uk@li.org>\n"
@@ -77,12 +77,12 @@ msgstr "Встановлені пакети"
 msgid "Available Kernels"
 msgstr "Доступні ядра"
 
-#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:186
+#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:187
 msgid "Installed"
 msgstr "Встановлено"
 
-#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:186
-#: src/Gtk/MainWindow.vala:628 src/Gtk/MainWindow.vala:642
+#: src/Common/LinuxKernel.vala:1021 src/Gtk/MainWindow.vala:187
+#: src/Gtk/MainWindow.vala:648 src/Gtk/MainWindow.vala:662
 msgid "Running"
 msgstr "Використовується"
 
@@ -100,7 +100,7 @@ msgstr "Добре"
 msgid "ERROR"
 msgstr "ПОМИЛКА"
 
-#: src/Common/LinuxKernel.vala:1096 src/Gtk/MainWindow.vala:650
+#: src/Common/LinuxKernel.vala:1096 src/Gtk/MainWindow.vala:670
 msgid "This kernel is already installed."
 msgstr "Це ядро вже встановлено."
 
@@ -271,7 +271,7 @@ msgstr "Ядра не вказані"
 msgid "Multiple kernels selected for installation. Select only one."
 msgstr "Для встановлення вибрано кілька ядер. Виберіть лише одну."
 
-#: src/Console/AppConsole.vala:262 src/Gtk/MainWindow.vala:100
+#: src/Console/AppConsole.vala:262 src/Gtk/MainWindow.vala:101
 msgid "Could not find requested version"
 msgstr "Не вдалося знайти запитувану версію"
 
@@ -298,7 +298,7 @@ msgid "Kernel %s Available"
 msgstr "Доступне ядро %s"
 
 #: src/Console/AppConsole.vala:367 src/Console/AppConsole.vala:379
-#: src/Gtk/MainWindow.vala:330
+#: src/Gtk/MainWindow.vala:331
 msgid "Install"
 msgstr "Встановити"
 
@@ -310,109 +310,119 @@ msgstr "Роздрукувати зневадження"
 msgid "Show all options"
 msgstr "Показати усі параметри"
 
-#: src/Gtk/MainWindow.vala:146
+#: src/Gtk/MainWindow.vala:147
 msgid "Kernel"
 msgstr "Ядро"
 
-#: src/Gtk/MainWindow.vala:174
+#: src/Gtk/MainWindow.vala:175
 msgid "Status"
 msgstr "Стан"
 
-#: src/Gtk/MainWindow.vala:314
+#: src/Gtk/MainWindow.vala:315
 msgid "Refresh"
 msgstr "Оновити"
 
-#: src/Gtk/MainWindow.vala:321 src/Utility/TeeJee.System.vala:42
+#: src/Gtk/MainWindow.vala:322 src/Utility/TeeJee.System.vala:42
 msgid "Internet connection is not active"
 msgstr "Інтернет з'єднання не активне"
 
-#: src/Gtk/MainWindow.vala:321 src/Gtk/MainWindow.vala:525
-#: src/Gtk/MainWindow.vala:655
+#: src/Gtk/MainWindow.vala:322 src/Gtk/MainWindow.vala:545
+#: src/Gtk/MainWindow.vala:675
 msgid "No Internet"
 msgstr "Інтернет з'єднання відсутнє"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Multiple Kernels Selected"
 msgstr "Вибрано кілька ядер"
 
-#: src/Gtk/MainWindow.vala:339
+#: src/Gtk/MainWindow.vala:340
 msgid "Select a single kernel to install"
 msgstr "Виберіть одне ядро для встановлення"
 
-#: src/Gtk/MainWindow.vala:342 src/Gtk/MainWindow.vala:353
+#: src/Gtk/MainWindow.vala:343 src/Gtk/MainWindow.vala:354
 msgid "Not Selected"
 msgstr "Невибрано"
 
-#: src/Gtk/MainWindow.vala:342
+#: src/Gtk/MainWindow.vala:343
 msgid "Select the kernel to install"
 msgstr "Виберіть ядро для встановлення"
 
-#: src/Gtk/MainWindow.vala:347
+#: src/Gtk/MainWindow.vala:348
 #, fuzzy
 msgid "Uninstall"
 msgstr "Видалити"
 
-#: src/Gtk/MainWindow.vala:353
+#: src/Gtk/MainWindow.vala:354
 #, fuzzy
 msgid "Select the kernels to uninstall"
 msgstr "Виберіть ядро для встановлення"
 
-#: src/Gtk/MainWindow.vala:383 src/Gtk/MainWindow.vala:417
-#: src/Gtk/MainWindow.vala:687
+#: src/Gtk/MainWindow.vala:384 src/Gtk/MainWindow.vala:418
+#: src/Gtk/MainWindow.vala:707
 msgid "Close window to exit..."
 msgstr "Закрийте вікно, щоб вийти..."
 
-#: src/Gtk/MainWindow.vala:391
+#: src/Gtk/MainWindow.vala:392
 #, fuzzy
 msgid "Uninstall Old"
 msgstr "Видалити старе"
 
-#: src/Gtk/MainWindow.vala:392
+#: src/Gtk/MainWindow.vala:393
 #, fuzzy
 msgid "Uninstall kernels older than running kernel"
 msgstr "Видалити ядра, старіші за запущене ядро"
 
-#: src/Gtk/MainWindow.vala:424
+#: src/Gtk/MainWindow.vala:425
+#, fuzzy
+msgid "Boot Select"
+msgstr "Невибрано"
+
+#: src/Gtk/MainWindow.vala:426
+#, fuzzy
+msgid "Select the kernel to boot"
+msgstr "Виберіть ядро для встановлення"
+
+#: src/Gtk/MainWindow.vala:444
 msgid "Changes"
 msgstr "Зміни"
 
-#: src/Gtk/MainWindow.vala:435 src/Gtk/SettingsDialog.vala:50
+#: src/Gtk/MainWindow.vala:455 src/Gtk/SettingsDialog.vala:50
 msgid "Settings"
 msgstr "Налаштування"
 
-#: src/Gtk/MainWindow.vala:458
+#: src/Gtk/MainWindow.vala:478
 msgid "About"
 msgstr "Про программу"
 
-#: src/Gtk/MainWindow.vala:503
+#: src/Gtk/MainWindow.vala:523
 msgid "Kernel upgrade utility for Ubuntu-based distributions"
 msgstr "Програма оновлення ядра для дистрибутивів на базі Ubuntu"
 
-#: src/Gtk/MainWindow.vala:504
+#: src/Gtk/MainWindow.vala:524
 #, fuzzy
 msgid "Forked"
 msgstr "Двоєний"
 
-#: src/Gtk/MainWindow.vala:504
+#: src/Gtk/MainWindow.vala:524
 #, fuzzy
 msgid "Original"
 msgstr "Оригінал"
 
-#: src/Gtk/MainWindow.vala:525 src/Gtk/MainWindow.vala:655
+#: src/Gtk/MainWindow.vala:545 src/Gtk/MainWindow.vala:675
 #, fuzzy
 msgid "Internet connection is not active."
 msgstr "Інтернет з'єднання не активно."
 
-#: src/Gtk/MainWindow.vala:544
+#: src/Gtk/MainWindow.vala:564
 msgid "Refreshing..."
 msgstr "Оновлення..."
 
-#: src/Gtk/MainWindow.vala:638
+#: src/Gtk/MainWindow.vala:658
 #, fuzzy
 msgid "available"
 msgstr "доступний"
 
-#: src/Gtk/MainWindow.vala:650
+#: src/Gtk/MainWindow.vala:670
 #, fuzzy
 msgid "Already Installed"
 msgstr "Вже встановлено"

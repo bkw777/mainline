@@ -1,3 +1,10 @@
+mainline (1.0.16-hamonikr1) stable; urgency=medium
+
+  * Merged upstream latest source
+  * Update Korean translation
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 06 Oct 2022 11:56:56 +0900
+
 mainline (1.0.16) unstable; urgency=medium
 
   * Don't consider a new major kernel version to exist yet if there are no successful builds in it yet.
@@ -11,6 +18,28 @@ mainline (1.0.15) unstable; urgency=medium
 
  -- Brian K. White <b.kenyon.w@gmail.com>  Tue, 14 Sep 2021 16:46:07 -0400
 
+mainline (1.0.14hamonikr3) jin; urgency=medium
+
+  * Add boot-select feature
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 03 Jun 2021 12:28:35 +0900
+
+mainline (1.0.14hamonikr2) jin; urgency=medium
+
+  * Update src/Common/LinuxKernel.vala
+   - Fix purge feature for HamoniKR 
+   - Change equal to contain when compate
+  * Update po/ko.po
+   - Changed purge button name
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 01 Jun 2021 18:22:28 +0900
+
+mainline (1.0.14hamonikr1) jin; urgency=medium
+
+  * Release for HamoniKR
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 01 Jun 2021 15:05:31 +0900
+ 
 mainline (1.0.14) unstable; urgency=medium
 
   * Remove unnecessary VERSION_INT and build-time dependency for "bc"

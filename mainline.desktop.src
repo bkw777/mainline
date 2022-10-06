@@ -1,12 +1,16 @@
 [Desktop Entry]
-Name=BRANDING_LONGNAME
+Name=Ubuntu Mainline Kernel Installer
+Name[ko]=커널 업그레이드
 MimeType=
-Exec=BRANDING_SHORTNAME-gtk
+Exec=mainline-gtk
 Type=Application
-GenericName=BRANDING_LONGNAME
+GenericName=Ubuntu Mainline Kernel Installer
 Terminal=false
-Icon=BRANDING_SHORTNAME
-Comment=BRANDING_LONGNAME
+Icon=mainline
+Comment=Ubuntu Mainline Kernel Installer
+Comment[ko]=우분투 메인라인 커널 업그레이드 도구
 StartupNotify=true;
 Categories=System;
-StartupWMClass=BRANDING_SHORTNAME-gtk
+StartupWMClass=mainline-gtk
+Keywords=kernel;upgrade;update;
+Keywords[ko]=kernel;커널;업그레이드;업데이트;upgrade;update;
