@@ -216,7 +216,7 @@ msgstr "목록에서 unstable, RC 버전 포함"
 
 #: src/Console/AppConsole.vala:81 src/Gtk/SettingsDialog.vala:163
 msgid "Hide unstable and RC releases"
-msgstr "목록에서 unstable, RC 버전 포함"
+msgstr "목록에서 unstable, RC 버전 숨기기"
 
 #: src/Console/AppConsole.vala:82
 msgid "Enable verbose debugging output"
