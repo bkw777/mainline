@@ -1,0 +1,15 @@
+name: Compile
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo apt install libgee-0.8-dev libjson-glib-dev libvte-2.91-dev valac aria2 lsb-release aptitude make gettext dpkg-dev
+      - run: make
