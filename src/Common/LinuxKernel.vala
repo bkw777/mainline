@@ -196,7 +196,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 			cancelled = false;
 			var worker = new Thread<void>.try(null, () => {
 				try {
-					query_thread(notifier);
+					query_thread((owned) notifier);
 				} catch (Error e) {
 					log_error (e.message);
 				}

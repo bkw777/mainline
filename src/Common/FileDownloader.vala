@@ -30,7 +30,7 @@ public class FileDownloader : GLib.Object {
         this.destination = File.new_for_path(destination);
 
         this.cancellable = cancellable;
-        this.progress_callback = callback;
+        this.progress_callback = (owned) callback;
 
         if (cancellable != null)
             cancellable.connect (() => done = true);
@@ -39,7 +39,7 @@ public class FileDownloader : GLib.Object {
     private FileDownloader._synchronous(string uri, string destination,
                                         Cancellable? cancellable = null,
                                         owned FileProgressCallback? callback = null) throws Error {
-        this(uri, destination, cancellable, callback);
+        this(uri, destination, cancellable, (owned) callback);
         synchronously = true;
         start();
     }
@@ -48,13 +48,13 @@ public class FileDownloader : GLib.Object {
     public static void synchronous(string uri, string destination,
                                    Cancellable? cancellable = null,
                                    owned FileProgressCallback? callback = null) throws Error {
-        new FileDownloader._synchronous(uri, destination, cancellable, callback);
+        new FileDownloader._synchronous(uri, destination, cancellable, (owned) callback);
     }
 
     public FileDownloader.asynchronous(string uri, string destination,
                                        Cancellable? cancellable = null,
                                        owned FileProgressCallback? callback = null) throws Error {
-        this(uri, destination, cancellable, callback);
+        this(uri, destination, cancellable, (owned) callback);
         synchronously = false;
     }
 

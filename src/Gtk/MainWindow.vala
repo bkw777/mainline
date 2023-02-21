@@ -439,7 +439,7 @@ public class MainWindow : Gtk.Window{
 
 				try {
 					var changelog = new FileDownloader.asynchronous(selected_kernels[0].changes_file_uri, selected_kernels[0].changes_file, cancellable);
-					changelog.on_failure = handle_failure;
+					changelog.on_failure = (error) => handle_failure(error);
 					changelog.on_finished = () => progress_window.destroy();
 					changelog.start();
 
