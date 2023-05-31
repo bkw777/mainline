@@ -100,14 +100,12 @@ msgid "Kernel"
 msgstr "Ядро"
 
 #: src/Common/LinuxKernel.vala:928
-#, fuzzy
 msgid "not found"
-msgstr "Файл не знайдено"
+msgstr "не знайдено"
 
 #: src/Common/LinuxKernel.vala:935
-#, fuzzy
 msgid "Download: no downloadable kernels specified"
-msgstr "Команда не вказана"
+msgstr "Завантажити: ядра для завантаження не вказано"
 
 #: src/Common/LinuxKernel.vala:955
 msgid "enabled"
@@ -123,29 +121,26 @@ msgstr "вже встановлено."
 
 #: src/Common/LinuxKernel.vala:1014
 msgid "download failed."
-msgstr ""
+msgstr "не вдалося завантажити."
 
 #: src/Common/LinuxKernel.vala:1022
 #, fuzzy
 msgid "Install: no installable kernels secified"
-msgstr "Команда не вказана"
+msgstr "Встановлення: ядра, які можна встановити, не визначені"
 
 #: src/Common/LinuxKernel.vala:1034
 msgid "Uninstalling selected kernels"
 msgstr "Видаліть конкретні ядра"
 
 #: src/Common/LinuxKernel.vala:1038
-#, fuzzy
 msgid "Requested"
-msgstr "запитуваний"
+msgstr "Просив"
 
 #: src/Common/LinuxKernel.vala:1041
-#, fuzzy
 msgid "Not uninstalling the currently running kernel"
-msgstr "не видалятиме поточне запущене ядро"
+msgstr "Не видалення поточного ядра"
 
 #: src/Common/LinuxKernel.vala:1046
-#, fuzzy
 msgid "is locked"
 msgstr "заблоковано."
 
@@ -155,10 +150,9 @@ msgstr "знайдено"
 
 #: src/Common/LinuxKernel.vala:1058
 msgid "Uninstall: no uninstallable packages found"
-msgstr ""
+msgstr "Видалення: пакетів, які можна видалити, не знайдено"
 
 #: src/Common/LinuxKernel.vala:1094
-#, fuzzy
 msgid "is the highest installed version."
 msgstr "Видаліть усі, крім найвищої встановленої версії"
 
@@ -236,7 +230,6 @@ msgid "Check for kernel updates and notify current user"
 msgstr "Перевірте наявність оновлень ядра та повідомте поточного користувача"
 
 #: src/Console/AppConsole.vala:49
-#, fuzzy
 msgid "List available mainline kernels"
 msgstr "Список усіх доступних основних ядер"
 
@@ -249,12 +242,10 @@ msgid "Install latest mainline kernel"
 msgstr "Встановіть останнє основне ядро"
 
 #: src/Console/AppConsole.vala:52
-#, fuzzy
 msgid "Install latest point update in the current major version"
 msgstr "Встановіть останню точку оновлення для поточної серії"
 
 #: src/Console/AppConsole.vala:53
-#, fuzzy
 msgid "Install specified kernels"
 msgstr "Видаліть конкретні ядра"
 
@@ -289,23 +280,21 @@ msgstr "Виключення нестабільних і RC-релізів"
 
 #: src/Console/AppConsole.vala:63
 msgid "Verbosity. Set to n if given, or increment."
-msgstr ""
+msgstr "Багатослівність. Встановіть значення n, якщо задано, або приріст."
 
 #: src/Console/AppConsole.vala:64
 msgid "Assume Yes for all prompts (non-interactive mode)"
 msgstr "Так для всіх підказок (неінтерактивний режим)"
 
 #: src/Console/AppConsole.vala:67
-#, fuzzy
 msgid "One or more version strings taken from the output of --list"
 msgstr "Рядок версій, взятий з виводу --list"
 
 #: src/Console/AppConsole.vala:68
 msgid "comma, pipe, or colon-seperated, or quoted space seperated"
-msgstr ""
+msgstr "розділені комою, вертикальною рискою, двокрапкою або лапками"
 
 #: src/Console/AppConsole.vala:69
-#, fuzzy
 msgid "Locked kernels and the currently running kernel are ignored"
 msgstr "Поточне ядро, що працює, завжди буде ігноруватися"
 
@@ -400,7 +389,7 @@ msgstr "Показати усі параметри"
 
 #: src/Gtk/MainWindow.vala:143
 msgid "Lock"
-msgstr ""
+msgstr "Замок"
 
 #: src/Gtk/MainWindow.vala:160
 msgid "Status"
@@ -428,7 +417,7 @@ msgstr "Перезавантажити"
 
 #: src/Gtk/MainWindow.vala:330
 msgid "Delete and reload all cached kernel info"
-msgstr ""
+msgstr "Видаліть і перезавантажте всю кешовану інформацію про ядро"
 
 #: src/Gtk/MainWindow.vala:335 src/Gtk/SettingsDialog.vala:49
 msgid "Settings"
@@ -465,7 +454,7 @@ msgstr "доступний"
 #: src/Gtk/MainWindow.vala:572 src/Gtk/MainWindow.vala:611
 #: src/Gtk/MainWindow.vala:643
 msgid "DONE"
-msgstr ""
+msgstr "ГОТОВО"
 
 #: src/Gtk/ProgressWindow.vala:126 src/Gtk/TerminalWindow.vala:151
 msgid "Cancel"
