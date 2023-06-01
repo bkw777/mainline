@@ -31,7 +31,7 @@ msgstr "Завантаження кешованого"
 
 #: src/Common/LinuxKernel.vala:250
 msgid "queuing download"
-msgstr "Черга завантаження"
+msgstr "черга завантаження"
 
 #: src/Common/LinuxKernel.vala:271
 msgid "Fetching individual kernel indexes"
@@ -76,7 +76,7 @@ msgstr "Встановлено"
 
 #: src/Common/LinuxKernel.vala:668
 msgid "Invalid"
-msgstr "Інвалід"
+msgstr "Невірно"
 
 #: src/Common/LinuxKernel.vala:753
 msgid "Packages Available"
@@ -99,14 +99,12 @@ msgid "Kernel"
 msgstr "Ядро"
 
 #: src/Common/LinuxKernel.vala:913
-#, fuzzy
 msgid "not found"
-msgstr "Файл не знайдено"
+msgstr "не знайдено"
 
 #: src/Common/LinuxKernel.vala:920
-#, fuzzy
 msgid "Download: no downloadable kernels specified"
-msgstr "Команда не вказана"
+msgstr "Завантажити: ядра для завантаження не вказано"
 
 #: src/Common/LinuxKernel.vala:940
 msgid "enabled"
@@ -117,14 +115,12 @@ msgid "Downloading"
 msgstr "Завантаження"
 
 #: src/Common/LinuxKernel.vala:982
-#, fuzzy
 msgid "Installing selected kernels"
-msgstr "Видаліть конкретні ядра"
+msgstr "Встановлення обраних ядер"
 
 #: src/Common/LinuxKernel.vala:988 src/Common/LinuxKernel.vala:1026
-#, fuzzy
 msgid "Requested"
-msgstr "запитуваний"
+msgstr "Запитуваний"
 
 #: src/Common/LinuxKernel.vala:991
 msgid "is already installed."
@@ -132,12 +128,11 @@ msgstr "вже встановлено."
 
 #: src/Common/LinuxKernel.vala:1001
 msgid "download failed."
-msgstr ""
+msgstr "не вдалося завантажити."
 
 #: src/Common/LinuxKernel.vala:1009
-#, fuzzy
 msgid "Install: no installable kernels secified"
-msgstr "Команда не вказана"
+msgstr "Встановлення: ядра, які можна встановити, не визначені"
 
 #: src/Common/LinuxKernel.vala:1022
 msgid "Uninstalling selected kernels"
@@ -149,9 +144,8 @@ msgid "Not uninstalling the currently running kernel"
 msgstr "не видалятиме поточне запущене ядро"
 
 #: src/Common/LinuxKernel.vala:1034
-#, fuzzy
 msgid "is locked"
-msgstr "заблоковано."
+msgstr "заблоковано"
 
 #: src/Common/LinuxKernel.vala:1042
 msgid "found"
@@ -159,12 +153,11 @@ msgstr "знайдено"
 
 #: src/Common/LinuxKernel.vala:1046
 msgid "Uninstall: no uninstallable packages found"
-msgstr ""
+msgstr "Видалити: пакетів, які можна видалити, не знайдено"
 
 #: src/Common/LinuxKernel.vala:1082
-#, fuzzy
 msgid "is the highest installed version."
-msgstr "Видаліть усі, крім найвищої встановленої версії"
+msgstr "є найвищою встановленою версією."
 
 #: src/Common/LinuxKernel.vala:1095
 msgid "Could not find running kernel in list"
@@ -242,7 +235,7 @@ msgstr "Перевірте наявність оновлень ядра та п�
 #: src/Console/AppConsole.vala:46
 #, fuzzy
 msgid "List available mainline kernels"
-msgstr "Список усіх доступних основних ядер"
+msgstr "Список доступних основних ядер"
 
 #: src/Console/AppConsole.vala:47
 msgid "List installed kernels"
@@ -255,17 +248,15 @@ msgstr "Встановіть останнє основне ядро"
 #: src/Console/AppConsole.vala:49
 #, fuzzy
 msgid "Install latest point update in the current major version"
-msgstr "Встановіть останню точку оновлення для поточної серії"
+msgstr "Установіть останню точку оновлення в поточній основній версії"
 
 #: src/Console/AppConsole.vala:50
-#, fuzzy
 msgid "Install specified kernels"
-msgstr "Видаліть конкретні ядра"
+msgstr "Встановити вказані ядра"
 
 #: src/Console/AppConsole.vala:51
-#, fuzzy
 msgid "Uninstall specified kernels"
-msgstr "Видаліть конкретні ядра"
+msgstr "Видаліть вказані ядра"
 
 #: src/Console/AppConsole.vala:52 src/Gtk/MainWindow.vala:324
 msgid "Uninstall all but the highest installed version"
@@ -293,25 +284,23 @@ msgstr "Виключення нестабільних і RC-релізів"
 
 #: src/Console/AppConsole.vala:60
 msgid "Verbosity. Set to n if given, or increment."
-msgstr ""
+msgstr "Багатослівність. Встановіть значення n, якщо задано, або приріст."
 
 #: src/Console/AppConsole.vala:61
 msgid "Assume Yes for all prompts (non-interactive mode)"
 msgstr "Так для всіх підказок (неінтерактивний режим)"
 
 #: src/Console/AppConsole.vala:64
-#, fuzzy
 msgid "One or more version strings taken from the output of --list"
-msgstr "Рядок версій, взятий з виводу --list"
+msgstr "Один або кілька рядків версій, взятих із результату --list"
 
 #: src/Console/AppConsole.vala:65
 msgid "comma, pipe, or colon-seperated, or quoted space seperated"
-msgstr ""
+msgstr "розділені комою, вертикальною рискою, двокрапкою або лапками"
 
 #: src/Console/AppConsole.vala:66
-#, fuzzy
 msgid "Locked kernels and the currently running kernel are ignored"
-msgstr "Поточне ядро, що працює, завжди буде ігноруватися"
+msgstr "Заблоковані ядра та поточне запущене ядро ігноруються"
 
 #: src/Console/AppConsole.vala:143 src/Console/AppConsole.vala:200
 #: src/Gtk/AppGtk.vala:108
@@ -389,7 +378,7 @@ msgstr "Показати усі параметри"
 
 #: src/Gtk/MainWindow.vala:143
 msgid "Lock"
-msgstr ""
+msgstr "Замок"
 
 #: src/Gtk/MainWindow.vala:160
 msgid "Status"
@@ -417,7 +406,7 @@ msgstr "Перезавантажити"
 
 #: src/Gtk/MainWindow.vala:330
 msgid "Delete and reload all cached kernel info"
-msgstr ""
+msgstr "Видаліть і перезавантажте всю кешовану інформацію про ядро"
 
 #: src/Gtk/MainWindow.vala:335 src/Gtk/SettingsDialog.vala:46
 msgid "Settings"
@@ -454,7 +443,7 @@ msgstr "доступний"
 #: src/Gtk/MainWindow.vala:571 src/Gtk/MainWindow.vala:610
 #: src/Gtk/MainWindow.vala:644
 msgid "DONE"
-msgstr ""
+msgstr "ГОТОВО"
 
 #: src/Gtk/SettingsDialog.vala:56
 msgid "Notification"
