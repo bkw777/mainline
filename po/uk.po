@@ -177,7 +177,7 @@ msgstr "є найвищою встановленою версією."
 
 #: src/Common/LinuxKernel.vala:1117
 msgid "Could not find running kernel in list"
-msgstr "Не вдалося знайти запущене ядро у списку!"
+msgstr "Не вдалося знайти запущене ядро у списку"
 
 #: src/Common/LinuxKernel.vala:1122
 msgid "No old kernels to uninstall"
@@ -539,13 +539,15 @@ msgstr "Приховати нестабільні та RC випуски"
 
 #: src/Gtk/SettingsDialog.vala:113
 msgid "Hide failed or incomplete builds"
-msgstr ""
+msgstr "Приховати невдалі або незавершені збірки"
 
 #: src/Gtk/SettingsDialog.vala:114
 msgid ""
 "If a kernel version exists on the mainline-ppa site, but is an incomplete or "
 "failed build for your arch ("
 msgstr ""
+"Якщо версія ядра існує на сайті mainline-ppa, але є неповною або "
+"невдала збірка для вашої архи ("
 
 #: src/Gtk/SettingsDialog.vala:130
 msgid "previous major versions  ( -1 = all )"
@@ -576,6 +578,8 @@ msgid ""
 "Use the sha-256 hashes from the CHECKSUMS file to verify the .deb file "
 "downloads."
 msgstr ""
+"Використовуйте хеші sha-256 із файлу CHECKSUMS, щоб перевірити файл .deb"
+"завантаження."
 
 #: src/Gtk/SettingsDialog.vala:179
 msgid "Keep Downloads"
@@ -589,6 +593,11 @@ msgid ""
 "They are still deleted once they become older than the \"Show previous major "
 "versions\" setting, or if they have been updated on the mainline-ppa site."
 msgstr ""
+"Зберігайте завантажені файли .deb після встановлення та повторно використовуйте їх для видалення/"
+"встановіть повторно замість завантаження знову.\n"
+"\n"
+"Вони все одно видаляються, коли стають старшими за \"Показати попередній основний "
+параметр "версії\", або якщо вони були оновлені на сайті mainline-ppa."
 
 #: src/Gtk/SettingsDialog.vala:186
 msgid "Proxy"
@@ -600,7 +609,7 @@ msgstr "Команда авторизації"
 
 #: src/Gtk/SettingsDialog.vala:235
 msgid "Command used to run dpkg with root permissions"
-msgstr ""
+msgstr "Команда, яка використовується для запуску dpkg із правами root"
 
 #: src/Gtk/SettingsDialog.vala:239
 msgid "Done"
@@ -613,7 +622,8 @@ msgstr "Копія"
 #: src/Gtk/TerminalWindow.vala:154
 msgid ""
 "Copies the entire output buffer, including scrollback, to the clipboard."
-msgstr "Копіює весь вихідний буфер, включаючи прокручування, до буфера обміну."
+msgstr ""
+"Копіює весь вихідний буфер, включаючи прокручування, до буфера обміну."
 
 #: src/Gtk/TerminalWindow.vala:161
 msgid "Cancel"
