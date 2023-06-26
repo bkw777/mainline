@@ -239,7 +239,7 @@ msgstr "Не вдається дістатися до сайту"
 
 #: src/Console/AppConsole.vala:29
 msgid "install kernel packages from kernel.ubuntu.com"
-msgstr ""
+msgstr "встановити пакети ядра з kernel.ubuntu.com"
 
 #: src/Console/AppConsole.vala:31 src/Gtk/AppGtk.vala:54
 msgid "Syntax"
@@ -254,14 +254,12 @@ msgid "Check for kernel updates"
 msgstr "Перевірити оновлення ядра"
 
 #: src/Console/AppConsole.vala:36
-#, fuzzy
 msgid "Check for kernel updates and send a desktop notification"
-msgstr "Перевірте наявність оновлень ядра та повідомте поточного користувача"
+msgstr "Перевірте наявність оновлень ядра та надішліть сповіщення на робочий стіл"
 
 #: src/Console/AppConsole.vala:37
-#, fuzzy
 msgid "List available kernels"
-msgstr "Список доступних основних ядер"
+msgstr "Список доступних ядер"
 
 #: src/Console/AppConsole.vala:38
 msgid "List installed kernels"
@@ -297,7 +295,7 @@ msgstr "Видалити кешовану інформацію про досту
 
 #: src/Console/AppConsole.vala:46
 msgid "This help"
-msgstr ""
+msgstr "Ця допомога"
 
 #: src/Console/AppConsole.vala:48 src/Gtk/AppGtk.vala:56
 msgid "Options"
@@ -321,18 +319,19 @@ msgstr "Так для всіх підказок (неінтерактивний 
 
 #: src/Console/AppConsole.vala:54
 msgid "Pause for keypress before exiting (for external terminal)"
-msgstr ""
+msgstr "Пауза для натискання клавіші перед виходом (для зовнішнього терміналу)"
 
 #: src/Console/AppConsole.vala:57
 msgid "One or more version strings taken from the output of --list"
 msgstr "Один або кілька рядків версій, взятих із результату --list"
 
 #: src/Console/AppConsole.vala:58
-#, fuzzy
 msgid ""
 "comma, pipe, colon, or space seperated. (space requires quotes or "
 "backslashes)"
-msgstr "розділені комою, вертикальною рискою, двокрапкою або лапками"
+msgstr ""
+"кома, вертикальна лінія, двокрапка або пробіл. (пробіл вимагає лапок або "
+"зворотні косі риски)"
 
 #: src/Console/AppConsole.vala:59
 msgid "Locked kernels and the currently running kernel are ignored"
@@ -351,9 +350,8 @@ msgid "Error deleting"
 msgstr "Помилка видалення"
 
 #: src/Console/AppConsole.vala:214
-#, fuzzy
 msgid "Unknown command"
-msgstr "Невідомий параметр"
+msgstr "Невідома команда"
 
 #: src/Console/AppConsole.vala:225
 msgid "Latest update"
@@ -616,18 +614,25 @@ msgid ""
 "with the dpkg command, otherwise it will be appended to the end.\n"
 "See \"su -c\" in the drop down list for an example of that.\n"
 msgstr ""
+«Команда, яка використовується для запуску dpkg із правами root.\n»
+"\n"
+"Якщо синтаксис командного рядка програм автентифікації вимагає, щоб команда виконання була "
+"береться в лапки, а не просто додається в кінці команди"
+"рядок, ви можете включити один %s у рядок, і він буде замінений "
+"за допомогою команди dpkg, інакше її буде додано в кінець.\n"
+"Див. \"su -c\" у розкривному списку для прикладу цього.\n"
 
 #: src/Gtk/SettingsDialog.vala:279
 msgid "Terminal command used to run"
-msgstr ""
+msgstr "Команда терміналу, яка використовується для запуску"
 
 #: src/Gtk/SettingsDialog.vala:280
 msgid "Example"
-msgstr ""
+msgstr "Приклад"
 
 #: src/Gtk/SettingsDialog.vala:280
 msgid "will result in"
-msgstr ""
+msgstr "призведе до"
 
 #: src/Gtk/SettingsDialog.vala:282
 #, c-format
@@ -650,6 +655,23 @@ msgid ""
 "\n"
 "Edit the command to customize the appearance of the terminal."
 msgstr ""
+"Якщо синтаксис командного рядка програм терміналу вимагає виконання команди "
+"брати в лапки, а не просто додавати в кінці команди"
+"рядок, ви можете включити один %s у рядок, і він буде замінений "
+"за допомогою команди встановлення, інакше її буде додано в кінець.\n"
+"Див. приклад mate-terminal у спадному списку.\n"
+"\n"
+«Ви можете написати будь-який командний рядок, але зазначена програма має залишитися»
+"на передньому плані та блокувати під час виконання команди, а не fork і "
+"повернути негайно.\n"
+"Більшість термінальних програм працюють нормально за замовчуванням, але деякі вимагають спеціального "
+"прапорці командного рядка, а деякі взагалі непридатні для використання.\n"
+"\n"
+"Приклади:\n"
+"gnome-terminal можна заблокувати за допомогою параметра --wait.\n"
+"xfce4-terminal неможливо заблокувати.\n"
+"\n"
+"Відредагуйте команду, щоб налаштувати зовнішній вигляд терміналу".
 
 #: src/Gtk/SettingsDialog.vala:299
 msgid "Done"
