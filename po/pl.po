@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 15:01-0400\n"
-"PO-Revision-Date: 2023-06-21 01:02+0200\n"
+"POT-Creation-Date: 2023-06-28 16:52-0400\n"
+"PO-Revision-Date: 2023-06-29 01:06+0200\n"
 "Last-Translator: Matthaiks\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: src/Common/LinuxKernel.vala:106
 msgid "Distribution"
@@ -186,18 +186,17 @@ msgid "The following kernels will be uninstalled"
 msgstr "Następujące jądra zostaną odinstalowane"
 
 #: src/Common/LinuxKernel.vala:1108 src/lib/l.misc.vala:12
-#, fuzzy
 msgid "Continue? (y/N): "
-msgstr "Kontynuować?"
+msgstr "Kontynuować? (y/N): "
 
 #: src/Common/LinuxKernel.vala:1122
 msgid "No updates"
 msgstr "Brak aktualizacji"
 
 #: src/Common/LinuxKernel.vala:1124
-#, fuzzy, c-format
+#, c-format
 msgid "Install Kernel Version %s ? (y/N): "
-msgstr "Zainstalować wersję jądra %s? (t/n): "
+msgstr "Zainstalować wersję jądra %s? (y/N): "
 
 #: src/Common/Main.vala:198
 msgid "Missing Thread support in Glib."
@@ -240,7 +239,7 @@ msgstr "Nie można dotrzeć do witryny"
 
 #: src/Console/AppConsole.vala:29
 msgid "install kernel packages from kernel.ubuntu.com"
-msgstr ""
+msgstr "zainstaluj pakiety jąder z kernel.ubuntu.com"
 
 #: src/Console/AppConsole.vala:31 src/Gtk/AppGtk.vala:54
 msgid "Syntax"
@@ -255,14 +254,12 @@ msgid "Check for kernel updates"
 msgstr "Sprawdź nowe wersje jądra"
 
 #: src/Console/AppConsole.vala:36
-#, fuzzy
 msgid "Check for kernel updates and send a desktop notification"
-msgstr "Sprawdź nowe wersje jądra i powiadom bieżącego użytkownika"
+msgstr "Sprawdź aktualizacje jąder i wyślij powiadomienie na pulpicie"
 
 #: src/Console/AppConsole.vala:37
-#, fuzzy
 msgid "List available kernels"
-msgstr "Wyświetl listę dostępnych głównych jąder"
+msgstr "Wyświetl listę dostępnych jąder"
 
 #: src/Console/AppConsole.vala:38
 msgid "List installed kernels"
@@ -298,7 +295,7 @@ msgstr "Usuń informacje z pamięci podręcznej o dostępnych jądrach"
 
 #: src/Console/AppConsole.vala:46
 msgid "This help"
-msgstr ""
+msgstr "Ta pomoc"
 
 #: src/Console/AppConsole.vala:48 src/Gtk/AppGtk.vala:56
 msgid "Options"
@@ -323,18 +320,19 @@ msgstr "Przyjmij Tak dla wszystkich monitów (tryb nieinteraktywny)"
 #: src/Console/AppConsole.vala:54
 msgid "Pause for keypress before exiting (for external terminal)"
 msgstr ""
+"Pauza na naciśnięcie klawisza przed wyjściem (dla terminala zewnętrznego)"
 
 #: src/Console/AppConsole.vala:57
 msgid "One or more version strings taken from the output of --list"
 msgstr "Jeden lub więcej ciągów wersji pobranych z danych wyjściowych --list"
 
 #: src/Console/AppConsole.vala:58
-#, fuzzy
 msgid ""
 "comma, pipe, colon, or space seperated. (space requires quotes or "
 "backslashes)"
 msgstr ""
-"oddzielone przecinkiem, kreską pionową, dwukropkiem lub spacją w cudzysłowie"
+"oddzielone przecinkiem, kreską pionową, dwukropkiem lub spacją. (spacja "
+"wymaga cudzysłowów lub odwrotnych ukośników)"
 
 #: src/Console/AppConsole.vala:59
 msgid "Locked kernels and the currently running kernel are ignored"
@@ -353,9 +351,8 @@ msgid "Error deleting"
 msgstr "Błąd podczas usuwania"
 
 #: src/Console/AppConsole.vala:214
-#, fuzzy
 msgid "Unknown command"
-msgstr "Nieznana opcja"
+msgstr "Nieznane polecenie"
 
 #: src/Console/AppConsole.vala:225
 msgid "Latest update"
@@ -464,6 +461,8 @@ msgid ""
 "A tool for installing kernel packages\n"
 "from the Ubuntu Mainline Kernels PPA"
 msgstr ""
+"Narzędzie do instalowania pakietów\n"
+"jąder z Ubuntu Mainline Kernels PPA"
 
 #: src/Gtk/MainWindow.vala:415
 msgid "Original"
@@ -601,9 +600,8 @@ msgid "Proxy"
 msgstr "Serwer pośredniczący"
 
 #: src/Gtk/SettingsDialog.vala:222
-#, fuzzy
 msgid "External Commands"
-msgstr "Polecenia"
+msgstr "Polecenia zewnętrzne"
 
 #: src/Gtk/SettingsDialog.vala:249
 #, c-format
@@ -616,18 +614,25 @@ msgid ""
 "with the dpkg command, otherwise it will be appended to the end.\n"
 "See \"su -c\" in the drop down list for an example of that.\n"
 msgstr ""
+"Polecenie używane do uruchamiania dpkg z uprawnieniami roota.\n"
+"\n"
+"Jeśli składnia wiersza poleceń programów uwierzytelniania wymaga, aby "
+"polecenie wykonania było ujęte w cudzysłowy, a nie tylko dodawane na końcu "
+"wiersza poleceń, możesz umieścić pojedynczy %s w łańcuchu, a zostanie on "
+"zastąpiony poleceniem dpkg, w przeciwnym razie zostanie dołączony na końcu.\n"
+"Sprawdź „su -c” na rozwijanej liście, aby zobaczyć przykład.\n"
 
 #: src/Gtk/SettingsDialog.vala:279
 msgid "Terminal command used to run"
-msgstr ""
+msgstr "Polecenie terminala używane do uruchamiania"
 
 #: src/Gtk/SettingsDialog.vala:280
 msgid "Example"
-msgstr ""
+msgstr "Przykład"
 
 #: src/Gtk/SettingsDialog.vala:280
 msgid "will result in"
-msgstr ""
+msgstr "spowoduje"
 
 #: src/Gtk/SettingsDialog.vala:282
 #, c-format
@@ -650,6 +655,24 @@ msgid ""
 "\n"
 "Edit the command to customize the appearance of the terminal."
 msgstr ""
+"Jeśli składnia wiersza poleceń programów terminalowych wymaga, aby polecenie "
+"wykonania było ujęte w cudzysłowy, a nie tylko dodawane na końcu wiersza "
+"poleceń, możesz umieścić pojedynczy %s w łańcuchu, a zostanie on zastąpiony "
+"poleceniem install, w przeciwnym razie zostanie dołączony na końcu.\n"
+"Sprawdź mate-terminal na rozwijanej liście, aby zobaczyć przykład.\n"
+"\n"
+"Możesz napisać dowolną linię poleceń, ale określony program musi pozostać na "
+"pierwszym planie i blokować się podczas wykonywania polecenia, a nie "
+"rozwidlać się i natychmiast wracać.\n"
+"Większość programów terminalowych działa domyślnie dobrze, ale niektóre "
+"wymagają specjalnych flag wiersza poleceń, a niektóre w ogóle nie nadają się "
+"do użytku.\n"
+"\n"
+"Przykłady:\n"
+"gnome-terminal można zablokować, używając jego opcji --wait.\n"
+"xfce4-terminal nie może być blokowany.\n"
+"\n"
+"Edytuj polecenie, aby dostosować wygląd terminala."
 
 #: src/Gtk/SettingsDialog.vala:299
 msgid "Done"
