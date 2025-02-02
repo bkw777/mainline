@@ -430,8 +430,8 @@ public class MainWindow : Window {
 			website_label:BRANDING_WEBSITE,
 			comments:_("A tool for installing kernel packages\nfrom the Ubuntu Mainline Kernels PPA"),
 			copyright:
-				_("Original")+": \"ukuu\" © 2015-2018 Tony George\n" +
-				_("Forked")+": \""+BRANDING_SHORTNAME+"\" 2019-2025 "+BRANDING_AUTHORNAME,
+				"\"ukuu\" © 2015-2018 Tony George\n" +
+				"\""+BRANDING_SHORTNAME+"\" "+BRANDING_COPYRIGHT+" "+BRANDING_AUTHORNAME,
 			authors:authors,
 			translator_credits:TRANSLATORS,
 			license_type:License.GPL_3_0

@@ -171,12 +171,11 @@ Sorting on the "Notes" column is a way to see all kernels that have any notes to
 
 ## Secure Boot  
   If you want to have secure boot, then you need to have a signed kernel, and the mainline kernels are not signed.
-  
+
   This might be an answer.  
   I did not write this, have not tried to use it, nor even looked at it's code to see if it should be trusted.  
   It appears to be a script that you install in /etc that will be automatically triggered by dpkg as a post-install step.  
-  (I think you also have to read the rest of the readme to set up a shim and owner-key etc, this script would just be the last step to integrate with dpkg after you got everything else actually working.)
-  
+  (I think you also have to read the rest of the readme to set up a shim and owner-key etc, this script would just be the last step to integrate with dpkg after you got everything else actually working.)  
   https://github.com/berglh/ubuntu-sb-kernel-signing?tab=readme-ov-file#automated-signing-of-mainline-kernels-installed-with-mainline-or-via-dpkg
   <!-- https://github.com/M-P-P-C/Signing-a-Linux-Kernel-for-Secure-Boot -->
 

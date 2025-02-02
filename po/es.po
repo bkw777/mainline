@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-16 01:53-0400\n"
+"POT-Creation-Date: 2025-02-02 12:11-0500\n"
 "PO-Revision-Date: 2018-01-03 02:03-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish\n"
@@ -226,64 +226,64 @@ msgstr ""
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:123
+#: src/Common/Main.vala:124
 msgid "Y"
 msgstr "S"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:126
+#: src/Common/Main.vala:127
 msgid "y"
 msgstr "s"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:129
+#: src/Common/Main.vala:130
 msgid "N"
 msgstr ""
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:132
+#: src/Common/Main.vala:133
 msgid "n"
 msgstr "n"
 
-#: src/Common/Main.vala:224
+#: src/Common/Main.vala:225
 msgid "Missing threads support in GLib."
 msgstr ""
 
-#: src/Common/Main.vala:320
+#: src/Common/Main.vala:321
 msgid "Wrote config file"
 msgstr "Escribió el archivo de configuración"
 
-#: src/Common/Main.vala:339
+#: src/Common/Main.vala:340
 msgid "No config file"
 msgstr "Sin archivo de configuración"
 
-#: src/Common/Main.vala:422
+#: src/Common/Main.vala:423
 msgid "Loaded config file"
 msgstr "Archivo de configuración cargado"
 
-#: src/Common/Main.vala:444
+#: src/Common/Main.vala:445
 msgid "Called from"
 msgstr "Llamado desde"
 
-#: src/Common/Main.vala:444
+#: src/Common/Main.vala:445
 msgid "at logon"
 msgstr "al inicio"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Este archivo se sobrescribe y se ejecuta de nuevo cada vez que se guarda la "
 "configuración en"
 
-#: src/Common/Main.vala:485
+#: src/Common/Main.vala:486
 msgid "Notifications are disabled"
 msgstr "Las notificaciones están deshabilitadas"
 
-#: src/Common/Main.vala:538
+#: src/Common/Main.vala:539
 msgid "Can not reach site"
 msgstr "No se puede llegar al sitio"
 
@@ -619,14 +619,6 @@ msgstr ""
 "Una herramienta para instalar paquetes de kernel\n"
 "desde Ubuntu Mainline Kernels PPA"
 
-#: src/Gtk/MainWindow.vala:433
-msgid "Original"
-msgstr "Original"
-
-#: src/Gtk/MainWindow.vala:434
-msgid "Forked"
-msgstr "bifurcado"
-
 #: src/Gtk/MainWindow.vala:444
 msgid "Updating Kernels..."
 msgstr ""
@@ -884,17 +876,17 @@ msgstr ""
 msgid "Copy"
 msgstr "Copiar"
 
-#: src/Gtk/TerminalWindow.vala:138
+#: src/Gtk/TerminalWindow.vala:142
 msgid ""
 "Copies the entire output buffer, including scrollback, to the clipboard."
 msgstr ""
 "Copia todo el búfer de salida, incluido el desplazamiento hacia atrás, al "
 "portapapeles."
 
-#: src/Gtk/TerminalWindow.vala:145
+#: src/Gtk/TerminalWindow.vala:149
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Gtk/TerminalWindow.vala:153
+#: src/Gtk/TerminalWindow.vala:157
 msgid "Close"
 msgstr "Cerrar"

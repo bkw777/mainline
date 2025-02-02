@@ -35,7 +35,7 @@ json-glib := json-glib-1.0
 gee := gee-0.8
 
 #VALACFLAGS += $(shell pkg-config $(json-glib) --atleast-version=1.6 && echo " -D HAVE_GLIB_JSON_1_6")
-#VALACFLAGS += $(shell pkg-config $(vte) --atleast-version=0.66 && echo " -D HAVE_VTE_0_66")
+#VALACFLAGS += $(shell pkg-config $(vte) --atleast-version=0.72 && echo " -D VTE_0_72")
 VALACFLAGS += $(shell pkg-config $(glib) --atleast-version=2.56 || echo " --target-glib 2.32")
 
 include BRANDING.mak
@@ -44,6 +44,7 @@ build_symbols := -X -D'INSTALL_PREFIX="$(prefix)"' \
 	-X -D'BRANDING_SHORTNAME="$(BRANDING_SHORTNAME)"' \
 	-X -D'BRANDING_LONGNAME="$(BRANDING_LONGNAME)"' \
 	-X -D'BRANDING_VERSION="$(BRANDING_VERSION)"' \
+	-X -D'BRANDING_COPYRIGHT="$(BRANDING_COPYRIGHT)"' \
 	-X -D'BRANDING_AUTHORNAME="$(BRANDING_AUTHORNAME)"' \
 	-X -D'BRANDING_AUTHOREMAIL="$(BRANDING_AUTHOREMAIL)"' \
 	-X -D'BRANDING_WEBSITE="$(BRANDING_WEBSITE)"' \
@@ -98,10 +99,11 @@ $(BRANDING_SHORTNAME)-gtk: $(misc_files) $(common_vala_files) $(gui_vala_files) 
 $(misc_files): %: %.src BRANDING.mak
 	sed -e 's|BRANDING_SHORTNAME|$(BRANDING_SHORTNAME)|g' \
 		-e 's|BRANDING_LONGNAME|$(BRANDING_LONGNAME)|g' \
+		-e 's|BRANDING_VERSION|$(BRANDING_VERSION)|g' \
+		-e 's|BRANDING_COPYRIGHT|$(BRANDING_COPYRIGHT)|g' \
 		-e 's|BRANDING_AUTHORNAME|$(BRANDING_AUTHORNAME)|g' \
 		-e 's|BRANDING_AUTHOREMAIL|$(BRANDING_AUTHOREMAIL)|g' \
 		-e 's|BRANDING_WEBSITE|$(BRANDING_WEBSITE)|g' \
-		-e 's|BRANDING_VERSION|$(BRANDING_VERSION)|g' \
 		-e 's|BRANDING_GITREPO|$(BRANDING_GITREPO)|g' \
 		$(@).src >$(@)
 
