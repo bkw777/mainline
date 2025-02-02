@@ -171,7 +171,8 @@ Sorting on the "Notes" column is a way to see all kernels that have any notes to
 
 ## Secure Boot  
   Possibly useful, I have not tried:  
-  https://github.com/M-P-P-C/Signing-a-Linux-Kernel-for-Secure-Boot
+  https://github.com/berglh/ubuntu-sb-kernel-signing?tab=readme-ov-file#automated-signing-of-mainline-kernels-installed-with-mainline-or-via-dpkg
+  <!-- https://github.com/M-P-P-C/Signing-a-Linux-Kernel-for-Secure-Boot -->
 
 ## Kernels with broken dependencies  
   The build environment that builds the kernels is newer than most installed systems, and so the built kernels occasionally but regularly break compatibility with all current release and older systems.
