@@ -1,3 +1,9 @@
+mainline (1.4.11) unstable; urgency=medium
+
+  * no functional change, just keep up with vte changes so it builds with current vte
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Mon, 03 Feb 2025 06:18:41 -0500
+
 mainline (1.4.10) unstable; urgency=medium
 
   * Fix notification actions broken in 1.4.9
