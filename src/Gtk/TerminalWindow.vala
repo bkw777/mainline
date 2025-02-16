@@ -131,7 +131,7 @@ public class TerminalWindow : Gtk.Window {
 		btn_copy.clicked.connect(()=>{
 			long output_end_col, output_end_row;
 			term.get_cursor_position(out output_end_col, out output_end_row);
-#if VALA_0_54  // between vte 0.72 and 0.76
+#if VALA_0_56 // vte 0.72
 			string? buf = term.get_text_range_format(TEXT,0,0,output_end_row,-1,null);
 #else
 			string? buf = term.get_text_range(0, 0, output_end_row, -1, null, null);
