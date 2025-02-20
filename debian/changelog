@@ -1,3 +1,9 @@
+mainline (1.4.12) unstable; urgency=medium
+
+  * fix build on jammy by detecting vte version with pkgkit
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Wed, 19 Feb 2025 22:52:04 -0500
+
 mainline (1.4.11) unstable; urgency=medium
 
   * no functional change, just keep up with vte changes so it builds with current vte
