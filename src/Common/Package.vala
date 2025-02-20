@@ -1,6 +1,6 @@
 
-using l.misc;
-using l.exec;
+using l_misc;
+using l_exec;
 
 public class Package : GLib.Object {
 	public string name;

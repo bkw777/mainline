@@ -1,5 +1,5 @@
 
-using l.misc;
+using l_misc;
 
 public class SettingsWindow : Gtk.Window {
 

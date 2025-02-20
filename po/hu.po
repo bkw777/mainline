@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline 1.4.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-16 13:22-0500\n"
+"POT-Creation-Date: 2025-02-20 14:45-0500\n"
 "PO-Revision-Date: 2024-12-13 20:52+0100\n"
 "Last-Translator: Kálmán „KAMI” Szalai <kami911@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -231,64 +231,64 @@ msgstr "Nincsenek elérhető frissítések"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:124
+#: src/Common/Main.vala:125
 msgid "Y"
 msgstr "I"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:127
+#: src/Common/Main.vala:128
 msgid "y"
 msgstr "i"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:130
+#: src/Common/Main.vala:131
 msgid "N"
 msgstr "N"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:133
+#: src/Common/Main.vala:134
 msgid "n"
 msgstr "n"
 
-#: src/Common/Main.vala:225
+#: src/Common/Main.vala:226
 msgid "Missing threads support in GLib."
 msgstr "A Glib programkönyvtárban nincs szálkezelési támogatás."
 
-#: src/Common/Main.vala:321
+#: src/Common/Main.vala:322
 msgid "Wrote config file"
 msgstr "A beállítófájl elmentve"
 
-#: src/Common/Main.vala:340
+#: src/Common/Main.vala:341
 msgid "No config file"
 msgstr "Nincsen beállítófájl"
 
-#: src/Common/Main.vala:423
+#: src/Common/Main.vala:424
 msgid "Loaded config file"
 msgstr "Betöltött beállítófájl"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "Called from"
 msgstr "Innen meghívva: "
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "at logon"
 msgstr "bejelntkezéskor"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:447
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Ez a fájl felülíródik, majd újra végrehajtódik, amikor a beállítások mentése "
 "ide történik meg:"
 
-#: src/Common/Main.vala:486
+#: src/Common/Main.vala:487
 msgid "Notifications are disabled"
 msgstr "Értesítések letiltva"
 
-#: src/Common/Main.vala:539
+#: src/Common/Main.vala:540
 msgid "Can not reach site"
 msgstr "A webhely nem érhető el"
 
@@ -297,11 +297,11 @@ msgstr "A webhely nem érhető el"
 msgid "!!! Error running %s"
 msgstr "Hiba a(z) „%s” futtatásakor"
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l_exec.vala:7 src/Gtk/MainWindow.vala:344
 msgid "Unable to launch"
 msgstr "Nem indítható el"
 
-#: src/lib/l.misc.vala:9
+#: src/lib/l_misc.vala:9
 msgid "Continue?"
 msgstr "Folytatni kívánja?"
 

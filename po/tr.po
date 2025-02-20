@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-16 13:22-0500\n"
+"POT-Creation-Date: 2025-02-20 14:45-0500\n"
 "PO-Revision-Date: 2024-01-05 13:29+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish\n"
@@ -226,63 +226,63 @@ msgstr "Güncelleme yok"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:124
+#: src/Common/Main.vala:125
 msgid "Y"
 msgstr "E"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:127
+#: src/Common/Main.vala:128
 msgid "y"
 msgstr "e"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:130
+#: src/Common/Main.vala:131
 msgid "N"
 msgstr "H"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:133
+#: src/Common/Main.vala:134
 msgid "n"
 msgstr "h"
 
-#: src/Common/Main.vala:225
+#: src/Common/Main.vala:226
 msgid "Missing threads support in GLib."
 msgstr "GLib'de eksik iş parçacığı desteği."
 
-#: src/Common/Main.vala:321
+#: src/Common/Main.vala:322
 msgid "Wrote config file"
 msgstr "Yapılandırma dosyasını yazdı"
 
-#: src/Common/Main.vala:340
+#: src/Common/Main.vala:341
 msgid "No config file"
 msgstr "Yapılandırma dosyası yok"
 
-#: src/Common/Main.vala:423
+#: src/Common/Main.vala:424
 msgid "Loaded config file"
 msgstr "Yapılandırma dosyası yüklendi"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "Called from"
 msgstr "Çağrı konumu"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "at logon"
 msgstr "başlangıçta"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:447
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Bu dosyanın üzerine yazılır ve ayarlar her kaydedildiğinde yeniden yürütülür"
 
-#: src/Common/Main.vala:486
+#: src/Common/Main.vala:487
 msgid "Notifications are disabled"
 msgstr "Bildirimler devre dışı bırakılmış"
 
-#: src/Common/Main.vala:539
+#: src/Common/Main.vala:540
 msgid "Can not reach site"
 msgstr "Siteye ulaşılamıyor"
 
@@ -291,11 +291,11 @@ msgstr "Siteye ulaşılamıyor"
 msgid "!!! Error running %s"
 msgstr "!!! %s çalışırken hata"
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l_exec.vala:7 src/Gtk/MainWindow.vala:344
 msgid "Unable to launch"
 msgstr "Başlatılamadı"
 
-#: src/lib/l.misc.vala:9
+#: src/lib/l_misc.vala:9
 msgid "Continue?"
 msgstr "Devam?"
 

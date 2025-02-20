@@ -34,8 +34,9 @@ gtk+ := gtk+-3.0
 json-glib := json-glib-1.0
 gee := gee-0.8
 
-#VALACFLAGS += $(shell pkg-config $(json-glib) --atleast-version=1.6 && echo " -D HAVE_GLIB_JSON_1_6")
+VALACFLAGS += $(shell pkg-config $(json-glib) --atleast-version=1.6 && echo " -D GLIB_JSON_1_6")
 VALACFLAGS += $(shell pkg-config $(vte) --atleast-version=0.72 && echo " -D VTE_0_72")
+VALACFLAGS += $(shell pkg-config $(vte) --atleast-version=0.66 && echo " -D VTE_0_66")
 VALACFLAGS += $(shell pkg-config $(glib) --atleast-version=2.56 || echo " --target-glib 2.32")
 
 include BRANDING.mak

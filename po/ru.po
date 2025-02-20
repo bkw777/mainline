@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-16 13:22-0500\n"
+"POT-Creation-Date: 2025-02-20 14:45-0500\n"
 "PO-Revision-Date: 2023-08-15 01:24+0300\n"
 "Last-Translator: Danik2343 <krutalevex@mail.ru>\n"
 "Language-Team: Russian\n"
@@ -226,63 +226,63 @@ msgstr "Нет обнолений"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:124
+#: src/Common/Main.vala:125
 msgid "Y"
 msgstr "Д"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:127
+#: src/Common/Main.vala:128
 msgid "y"
 msgstr "д"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:130
+#: src/Common/Main.vala:131
 msgid "N"
 msgstr "Н"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:133
+#: src/Common/Main.vala:134
 msgid "n"
 msgstr "н"
 
-#: src/Common/Main.vala:225
+#: src/Common/Main.vala:226
 msgid "Missing threads support in GLib."
 msgstr "Поддержка отсутствующих потоков в GLib."
 
-#: src/Common/Main.vala:321
+#: src/Common/Main.vala:322
 msgid "Wrote config file"
 msgstr "Записан файл конфигурации"
 
-#: src/Common/Main.vala:340
+#: src/Common/Main.vala:341
 msgid "No config file"
 msgstr "Нет файла конфигурации"
 
-#: src/Common/Main.vala:423
+#: src/Common/Main.vala:424
 msgid "Loaded config file"
 msgstr "Загружен файл конфигурации"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "Called from"
 msgstr "Вызван из"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "at logon"
 msgstr "при запуске"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:447
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Этот файл перезаписывается и выполняется снова при сохранении настроек в"
 
-#: src/Common/Main.vala:486
+#: src/Common/Main.vala:487
 msgid "Notifications are disabled"
 msgstr "Уведомления отключены"
 
-#: src/Common/Main.vala:539
+#: src/Common/Main.vala:540
 msgid "Can not reach site"
 msgstr "Не удается связаться с сайтом"
 
@@ -291,11 +291,11 @@ msgstr "Не удается связаться с сайтом"
 msgid "!!! Error running %s"
 msgstr "!!! Ошибка запуска %s"
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l_exec.vala:7 src/Gtk/MainWindow.vala:344
 msgid "Unable to launch"
 msgstr "Невозможно запустить"
 
-#: src/lib/l.misc.vala:9
+#: src/lib/l_misc.vala:9
 msgid "Continue?"
 msgstr "Продолжать?"
 

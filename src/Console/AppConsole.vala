@@ -19,8 +19,8 @@
  * MA 02110-1301, USA.
  */
 
-using l.misc;
-using l.exec;
+using l_misc;
+using l_exec;
 
 public Main App;
 public AppConsole CLI;

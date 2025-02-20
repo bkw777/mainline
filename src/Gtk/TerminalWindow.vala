@@ -20,7 +20,7 @@
  * MA 02110-1301, USA.
  */
 
-using l.misc;
+using l_misc;
 
 public class TerminalWindow : Gtk.Window {
 
@@ -92,7 +92,7 @@ public class TerminalWindow : Gtk.Window {
 		term.scroll_on_output = true;
 		term.scrollback_lines = -1;
 
-#if VALA_0_50
+#if VTE_0_66
 		// rude blasting away the clipboard instead of using a context menu
 		term.selection_changed.connect(() => { term.copy_clipboard_format(Vte.Format.TEXT); });
 #endif
@@ -206,7 +206,7 @@ public class TerminalWindow : Gtk.Window {
 		cmd_complete.connect(()=>{ present(); allow_close(true); });
 		term.child_exited.connect(child_has_exited);
 		is_running = true;
-#if VALA_0_50 // vte 0.66 or so
+#if VTE_0_66
 		term.spawn_async(
 			Vte.PtyFlags.DEFAULT,        // pty_flags
 			null,                        // working directory

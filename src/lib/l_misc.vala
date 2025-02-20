@@ -1,5 +1,5 @@
 
-namespace l.misc {
+namespace l_misc {
 
 	public bool ask(string? prompt = null, bool def = false, bool force = false) {
 		if (!force) {

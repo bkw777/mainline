@@ -19,7 +19,7 @@
  * MA 02110-1301, USA.
  */
 
-using l.misc;
+using l_misc;
 
 public Main App;
 

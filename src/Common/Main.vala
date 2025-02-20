@@ -23,10 +23,11 @@
 
 using Json;
 
-using l.misc;
-using l.exec;
-#if !VALA_0_50
-using l.json;
+using l_misc;
+using l_exec;
+
+#if !GLIB_JSON_1_6
+using l_json;
 #endif
 
 [CCode(cname="BRANDING_SHORTNAME")] extern const string BRANDING_SHORTNAME;
@@ -70,7 +71,7 @@ const int      DEFAULT_NOTIFY_INTERVAL_UNIT    = 0     ;
 // external commands - the first in each list is the default
 const string[] DEFAULT_AUTH_CMDS = {
 	"pkexec",
-	//"pkexec env DISPLAY=${DISPLAY} XAUTHORITY=${XAUTHORITY}", // only needed for gui apps
+	//"pkexec env DISPLAY=${DISPLAY} XAUTHORITY=${XAUTHORITY}", // only needed for gui apps, we only run dpkg
 	"sudo",
 	"su -c \"%s\"",
 	"doas",
@@ -348,7 +349,7 @@ public class Main : Application {
 		var node = parser.get_root();
 		var config = node.get_object();
 
-#if VALA_0_50 // glib-json 1.6
+#if GLIB_JSON_1_6
 		ppa_uri                 =       config.get_string_member_with_default(  "ppa_uri",                 DEFAULT_PPA_URI                 );
 		all_proxy               =       config.get_string_member_with_default(  "all_proxy",               DEFAULT_ALL_PROXY               );
 		connect_timeout_seconds = (int) config.get_int_member_with_default(     "connect_timeout_seconds", DEFAULT_CONNECT_TIMEOUT_SECONDS );

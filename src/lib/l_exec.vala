@@ -1,6 +1,6 @@
-using l.misc;
+using l_misc;
 
-namespace l.exec {
+namespace l_exec {
 	public bool uri_open(string s) {
 		bool r = true;
 		try { AppInfo.launch_default_for_uri(s,null); }

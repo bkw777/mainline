@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-16 13:22-0500\n"
+"POT-Creation-Date: 2025-02-20 14:45-0500\n"
 "PO-Revision-Date: 2018-01-03 02:03-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish\n"
@@ -226,64 +226,64 @@ msgstr ""
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:124
+#: src/Common/Main.vala:125
 msgid "Y"
 msgstr "S"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:127
+#: src/Common/Main.vala:128
 msgid "y"
 msgstr "s"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:130
+#: src/Common/Main.vala:131
 msgid "N"
 msgstr ""
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:133
+#: src/Common/Main.vala:134
 msgid "n"
 msgstr "n"
 
-#: src/Common/Main.vala:225
+#: src/Common/Main.vala:226
 msgid "Missing threads support in GLib."
 msgstr ""
 
-#: src/Common/Main.vala:321
+#: src/Common/Main.vala:322
 msgid "Wrote config file"
 msgstr "Escribió el archivo de configuración"
 
-#: src/Common/Main.vala:340
+#: src/Common/Main.vala:341
 msgid "No config file"
 msgstr "Sin archivo de configuración"
 
-#: src/Common/Main.vala:423
+#: src/Common/Main.vala:424
 msgid "Loaded config file"
 msgstr "Archivo de configuración cargado"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "Called from"
 msgstr "Llamado desde"
 
-#: src/Common/Main.vala:445
+#: src/Common/Main.vala:446
 msgid "at logon"
 msgstr "al inicio"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:447
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Este archivo se sobrescribe y se ejecuta de nuevo cada vez que se guarda la "
 "configuración en"
 
-#: src/Common/Main.vala:486
+#: src/Common/Main.vala:487
 msgid "Notifications are disabled"
 msgstr "Las notificaciones están deshabilitadas"
 
-#: src/Common/Main.vala:539
+#: src/Common/Main.vala:540
 msgid "Can not reach site"
 msgstr "No se puede llegar al sitio"
 
@@ -292,11 +292,11 @@ msgstr "No se puede llegar al sitio"
 msgid "!!! Error running %s"
 msgstr ""
 
-#: src/lib/l.exec.vala:7 src/Gtk/MainWindow.vala:344
+#: src/lib/l_exec.vala:7 src/Gtk/MainWindow.vala:344
 msgid "Unable to launch"
 msgstr "Incapaz de lanzar"
 
-#: src/lib/l.misc.vala:9
+#: src/lib/l_misc.vala:9
 msgid "Continue?"
 msgstr ""
 
