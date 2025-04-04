@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 14:45-0500\n"
+"POT-Creation-Date: 2025-04-04 00:44-0400\n"
 "PO-Revision-Date: 2019-07-25 11:00+0300\n"
 "Last-Translator: Serhii Golovko <cappelikan@gmail.com>\n"
 "Language-Team: Ukranian\n"
@@ -226,63 +226,63 @@ msgstr "Жодних оновлень"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:125
+#: src/Common/Main.vala:126
 msgid "Y"
 msgstr "Т"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:128
+#: src/Common/Main.vala:129
 msgid "y"
 msgstr "т"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:131
+#: src/Common/Main.vala:132
 msgid "N"
 msgstr "Н"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:134
+#: src/Common/Main.vala:135
 msgid "n"
 msgstr "н"
 
-#: src/Common/Main.vala:226
+#: src/Common/Main.vala:228
 msgid "Missing threads support in GLib."
 msgstr "Підтримка відсутніх потоків у GLib."
 
-#: src/Common/Main.vala:322
+#: src/Common/Main.vala:325
 msgid "Wrote config file"
 msgstr "Написав файл конфігурації"
 
-#: src/Common/Main.vala:341
+#: src/Common/Main.vala:344
 msgid "No config file"
 msgstr "Немає файлу конфігурації"
 
-#: src/Common/Main.vala:424
+#: src/Common/Main.vala:429
 msgid "Loaded config file"
 msgstr "Завантажено конфігураційний файл"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:451
 msgid "Called from"
 msgstr "Викликано з"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:451
 msgid "at logon"
 msgstr "при запуску"
 
-#: src/Common/Main.vala:447
+#: src/Common/Main.vala:452
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Цей файл перезаписується та виконується знову під час збереження налаштувань"
 
-#: src/Common/Main.vala:487
+#: src/Common/Main.vala:492
 msgid "Notifications are disabled"
 msgstr "Повідомлення вимкнено"
 
-#: src/Common/Main.vala:540
+#: src/Common/Main.vala:546
 msgid "Can not reach site"
 msgstr "Не вдається дістатися до сайту"
 
@@ -804,68 +804,72 @@ msgstr "Проксі"
 msgid "Mainline-PPA URL"
 msgstr "Mainline-PPA URL"
 
-#: src/Gtk/SettingsWindow.vala:249
+#: src/Gtk/SettingsWindow.vala:246
+msgid "User Agent String"
+msgstr ""
+
+#: src/Gtk/SettingsWindow.vala:261
 msgid "External Commands"
 msgstr "Зовнішні Команди"
 
-#: src/Gtk/SettingsWindow.vala:256
+#: src/Gtk/SettingsWindow.vala:268
 msgid "Superuser Authorization"
 msgstr "Авторизація суперкористувача"
 
-#: src/Gtk/SettingsWindow.vala:278
+#: src/Gtk/SettingsWindow.vala:290
 msgid "Command used to run dpkg with root permissions."
 msgstr "Команда, яка використовується для запуску dpkg з правами доступу root."
 
-#: src/Gtk/SettingsWindow.vala:280
+#: src/Gtk/SettingsWindow.vala:292
 #, no-c-format
 msgid "The dpkg command is appended to the end, unless a %s is present."
 msgstr "Команда dpkg додається до кінця, якщо немає %s."
 
-#: src/Gtk/SettingsWindow.vala:281
+#: src/Gtk/SettingsWindow.vala:293
 #, no-c-format
 msgid "If a %s is present, then the %s is replaced with the dpkg command."
 msgstr "Якщо %s присутній, то %s замінюється командою dpkg."
 
-#: src/Gtk/SettingsWindow.vala:282 src/Gtk/SettingsWindow.vala:315
+#: src/Gtk/SettingsWindow.vala:294 src/Gtk/SettingsWindow.vala:327
 msgid "The built-in list contains examples of both."
 msgstr "Вбудований список містить приклади обох."
 
-#: src/Gtk/SettingsWindow.vala:284 src/Gtk/SettingsWindow.vala:321
+#: src/Gtk/SettingsWindow.vala:296 src/Gtk/SettingsWindow.vala:333
 msgid ""
 "To modify any of the built-in default commands, just select it and edit."
 msgstr ""
 "Щоб змінити будь-яку з вбудованих команд за замовчуванням, просто виберіть "
 "її та відредагуйте."
 
-#: src/Gtk/SettingsWindow.vala:285 src/Gtk/SettingsWindow.vala:322
+#: src/Gtk/SettingsWindow.vala:297 src/Gtk/SettingsWindow.vala:334
 msgid ""
 "The edited command is saved in the config file, the original is not changed."
 msgstr ""
 "Відредагована команда зберігається у файлі конфігурації, оригінал не "
 "змінюється."
 
-#: src/Gtk/SettingsWindow.vala:289
+#: src/Gtk/SettingsWindow.vala:301
 msgid "Terminal Window"
 msgstr "Вікно клеми"
 
-#: src/Gtk/SettingsWindow.vala:311
+#: src/Gtk/SettingsWindow.vala:323
 msgid "Terminal command used to run"
 msgstr "Команда терміналу, яка використовується для запуску"
 
-#: src/Gtk/SettingsWindow.vala:313
+#: src/Gtk/SettingsWindow.vala:325
 #, no-c-format
 msgid ""
 "The install/uninstall command is appended to the end, unless a %s is present."
 msgstr "Команда встановлення/видалення додається до кінця, якщо немає %s."
 
-#: src/Gtk/SettingsWindow.vala:314
+#: src/Gtk/SettingsWindow.vala:326
 #, no-c-format
 msgid ""
 "If a %s is present, then the %s is replaced with the install/uninstall "
 "command."
 msgstr "Якщо %s присутній, то %s замінюється командою install/uninstall."
 
-#: src/Gtk/SettingsWindow.vala:317
+#: src/Gtk/SettingsWindow.vala:329
 msgid ""
 "The terminal program must stay in the foreground and block while the command "
 "is running, not fork and return immediately."
@@ -873,7 +877,7 @@ msgstr ""
 "Термінальна програма повинна залишатися на передньому плані і блокуватися "
 "під час виконання команди, а не розгалужуватися і повертатися відразу."
 
-#: src/Gtk/SettingsWindow.vala:318
+#: src/Gtk/SettingsWindow.vala:330
 msgid ""
 "Most terminal programs block by default, some require special commandline "
 "options."
@@ -881,7 +885,7 @@ msgstr ""
 "Більшість термінальних програм блокуються за замовчуванням, деякі вимагають "
 "спеціального командного рядкаопції."
 
-#: src/Gtk/SettingsWindow.vala:319
+#: src/Gtk/SettingsWindow.vala:331
 #, c-format
 msgid "For example, %s requires \"%s\"."
 msgstr "Наприклад, %s вимагає \"%s\"."

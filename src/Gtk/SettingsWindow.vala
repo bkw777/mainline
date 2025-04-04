@@ -242,6 +242,18 @@ public class SettingsWindow : Gtk.Window {
 			}
 		});
 
+		// user-agent
+		label = new Gtk.Label(_("User Agent String"));
+		pgbox.add(label);
+		label.xalign = 0;
+
+		var ent_useragent = new Gtk.Entry ();
+		pgbox.add(ent_useragent);
+		//ent_useragent.set_placeholder_text("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0");
+		//ent_useragent.set_tooltip_text(_("The mainline-ppa site currently blocks traffic from Aria (the http client we use to download files), so use this http client user-agent string instead of Arias normal string."));
+		ent_useragent.set_text(App.user_agent);
+		ent_useragent.activate.connect(()=>{ App.user_agent = ent_useragent.get_text(); });
+
 		//==============================================================
 		// Page 4 - EXTERNAL COMMANDS
 		//==============================================================

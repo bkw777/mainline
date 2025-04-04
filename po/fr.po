@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mainline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 14:45-0500\n"
+"POT-Creation-Date: 2025-04-04 00:44-0400\n"
 "PO-Revision-Date: 2018-08-05 15:50+0200\n"
 "Last-Translator: Yolateng0 <yo@yo.nohost.me>\n"
 "Language-Team: French\n"
@@ -226,64 +226,64 @@ msgstr ""
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "yes",
 #. * string may be longer than one character. Examples: "Y" or "[y]"
-#: src/Common/Main.vala:125
+#: src/Common/Main.vala:126
 msgid "Y"
 msgstr "O"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "yes",
 #. * Example: "y"
-#: src/Common/Main.vala:128
+#: src/Common/Main.vala:129
 msgid "y"
 msgstr "o"
 
 #. Translators: uppercase, or otherwise emphasized, display version of a single character for "no",
 #. * string may be longer than one character. Examples: "N" or "[n]"
-#: src/Common/Main.vala:131
+#: src/Common/Main.vala:132
 msgid "N"
 msgstr "N"
 
 #. Translators: lowercase, or otherwise not-emphasized, single keypress user response for "no",
 #. * Example: "n"
-#: src/Common/Main.vala:134
+#: src/Common/Main.vala:135
 msgid "n"
 msgstr "n"
 
-#: src/Common/Main.vala:226
+#: src/Common/Main.vala:228
 msgid "Missing threads support in GLib."
 msgstr ""
 
-#: src/Common/Main.vala:322
+#: src/Common/Main.vala:325
 msgid "Wrote config file"
 msgstr "A écrit le fichier de configuration"
 
-#: src/Common/Main.vala:341
+#: src/Common/Main.vala:344
 msgid "No config file"
 msgstr "Pas de fichier de configuration"
 
-#: src/Common/Main.vala:424
+#: src/Common/Main.vala:429
 msgid "Loaded config file"
 msgstr "Fichier de configuration chargé"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:451
 msgid "Called from"
 msgstr "Appelé à partir de"
 
-#: src/Common/Main.vala:446
+#: src/Common/Main.vala:451
 msgid "at logon"
 msgstr "au démarrage"
 
-#: src/Common/Main.vala:447
+#: src/Common/Main.vala:452
 msgid ""
 "This file is over-written and executed again whenever settings are saved in"
 msgstr ""
 "Ce fichier est écrasé et exécuté à nouveau chaque fois que les paramètres "
 "sont enregistrés dans"
 
-#: src/Common/Main.vala:487
+#: src/Common/Main.vala:492
 msgid "Notifications are disabled"
 msgstr "Les notifications sont désactivées"
 
-#: src/Common/Main.vala:540
+#: src/Common/Main.vala:546
 msgid "Can not reach site"
 msgstr "No se puede llegar al sitio"
 
@@ -789,51 +789,55 @@ msgstr "Proxy"
 msgid "Mainline-PPA URL"
 msgstr "Mainline-PPA URL"
 
-#: src/Gtk/SettingsWindow.vala:249
+#: src/Gtk/SettingsWindow.vala:246
+msgid "User Agent String"
+msgstr ""
+
+#: src/Gtk/SettingsWindow.vala:261
 msgid "External Commands"
 msgstr "Commandes externes"
 
-#: src/Gtk/SettingsWindow.vala:256
+#: src/Gtk/SettingsWindow.vala:268
 msgid "Superuser Authorization"
 msgstr "Autorisation de superutilisateur"
 
-#: src/Gtk/SettingsWindow.vala:278
+#: src/Gtk/SettingsWindow.vala:290
 msgid "Command used to run dpkg with root permissions."
 msgstr "Commande utilisée pour exécuter dpkg avec les permissions root."
 
-#: src/Gtk/SettingsWindow.vala:280
+#: src/Gtk/SettingsWindow.vala:292
 #, no-c-format
 msgid "The dpkg command is appended to the end, unless a %s is present."
 msgstr "La commande dpkg est ajoutée à la fin, sauf si un %s est présent."
 
-#: src/Gtk/SettingsWindow.vala:281
+#: src/Gtk/SettingsWindow.vala:293
 #, no-c-format
 msgid "If a %s is present, then the %s is replaced with the dpkg command."
 msgstr "Si un %s est présent, alors le %s est remplacé par la commande dpkg."
 
-#: src/Gtk/SettingsWindow.vala:282 src/Gtk/SettingsWindow.vala:315
+#: src/Gtk/SettingsWindow.vala:294 src/Gtk/SettingsWindow.vala:327
 msgid "The built-in list contains examples of both."
 msgstr "La liste intégrée contient des exemples des deux."
 
-#: src/Gtk/SettingsWindow.vala:284 src/Gtk/SettingsWindow.vala:321
+#: src/Gtk/SettingsWindow.vala:296 src/Gtk/SettingsWindow.vala:333
 msgid ""
 "To modify any of the built-in default commands, just select it and edit."
 msgstr ""
 
-#: src/Gtk/SettingsWindow.vala:285 src/Gtk/SettingsWindow.vala:322
+#: src/Gtk/SettingsWindow.vala:297 src/Gtk/SettingsWindow.vala:334
 msgid ""
 "The edited command is saved in the config file, the original is not changed."
 msgstr ""
 
-#: src/Gtk/SettingsWindow.vala:289
+#: src/Gtk/SettingsWindow.vala:301
 msgid "Terminal Window"
 msgstr "Fenêtre du terminal"
 
-#: src/Gtk/SettingsWindow.vala:311
+#: src/Gtk/SettingsWindow.vala:323
 msgid "Terminal command used to run"
 msgstr "Commande de terminal utilisée pour exécuter"
 
-#: src/Gtk/SettingsWindow.vala:313
+#: src/Gtk/SettingsWindow.vala:325
 #, no-c-format
 msgid ""
 "The install/uninstall command is appended to the end, unless a %s is present."
@@ -841,7 +845,7 @@ msgstr ""
 "La commande d'installation/désinstallation est ajoutée à la fin, sauf si un "
 "%s est présent."
 
-#: src/Gtk/SettingsWindow.vala:314
+#: src/Gtk/SettingsWindow.vala:326
 #, no-c-format
 msgid ""
 "If a %s is present, then the %s is replaced with the install/uninstall "
@@ -850,7 +854,7 @@ msgstr ""
 "Si un %s est présent, le %s est remplacé par la commande d'installation/"
 "désinstallation."
 
-#: src/Gtk/SettingsWindow.vala:317
+#: src/Gtk/SettingsWindow.vala:329
 msgid ""
 "The terminal program must stay in the foreground and block while the command "
 "is running, not fork and return immediately."
@@ -858,13 +862,13 @@ msgstr ""
 "Le programme du terminal doit rester au premier plan et se bloquer pendant "
 "l'exécution de la commande, pas bifurquer et revenir immédiatement."
 
-#: src/Gtk/SettingsWindow.vala:318
+#: src/Gtk/SettingsWindow.vala:330
 msgid ""
 "Most terminal programs block by default, some require special commandline "
 "options."
 msgstr ""
 
-#: src/Gtk/SettingsWindow.vala:319
+#: src/Gtk/SettingsWindow.vala:331
 #, c-format
 msgid "For example, %s requires \"%s\"."
 msgstr ""

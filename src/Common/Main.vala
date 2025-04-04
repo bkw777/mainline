@@ -53,6 +53,7 @@ const string GUI_EXE = BRANDING_SHORTNAME+"-gtk";
 const string   MATCH_PPA_URI_OLD_1             = "//kernel.ubuntu.com/~kernel-ppa/mainline/"; // obsolete 20231014
 const string   DEFAULT_PPA_URI                 = "https://kernel.ubuntu.com/mainline/"; // new 20231014
 const string   DEFAULT_ALL_PROXY               = ""    ;
+const string   DEFAULT_USER_AGENT              = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0"    ;
 const int      DEFAULT_CONNECT_TIMEOUT_SECONDS = 15    ;
 const int      DEFAULT_CONCURRENT_DOWNLOADS    = 4     ;
 const bool     DEFAULT_VERIFY_CHECKSUMS        = true  ;
@@ -182,6 +183,7 @@ public class Main : Application {
 	// config
 	public string ppa_uri              = DEFAULT_PPA_URI;
 	public string all_proxy            = DEFAULT_ALL_PROXY;
+	public string user_agent           = DEFAULT_USER_AGENT;
 	public int connect_timeout_seconds = DEFAULT_CONNECT_TIMEOUT_SECONDS;
 	public int concurrent_downloads    = DEFAULT_CONCURRENT_DOWNLOADS;
 	public bool hide_invalid           = DEFAULT_HIDE_INVALID;
@@ -283,6 +285,7 @@ public class Main : Application {
 		var config = new Json.Object();
 		config.set_string_member(  "ppa_uri",                 ppa_uri                 );
 		config.set_string_member(  "all_proxy",               all_proxy               );
+		config.set_string_member(  "user_agent",              user_agent              );
 		config.set_int_member(     "connect_timeout_seconds", connect_timeout_seconds );
 		config.set_int_member(     "concurrent_downloads",    concurrent_downloads    );
 		config.set_boolean_member( "hide_invalid",            hide_invalid            );
@@ -352,6 +355,7 @@ public class Main : Application {
 #if GLIB_JSON_1_6
 		ppa_uri                 =       config.get_string_member_with_default(  "ppa_uri",                 DEFAULT_PPA_URI                 );
 		all_proxy               =       config.get_string_member_with_default(  "all_proxy",               DEFAULT_ALL_PROXY               );
+		user_agent              =       config.get_string_member_with_default(  "user_agent",              DEFAULT_USER_AGENT              );
 		connect_timeout_seconds = (int) config.get_int_member_with_default(     "connect_timeout_seconds", DEFAULT_CONNECT_TIMEOUT_SECONDS );
 		concurrent_downloads    = (int) config.get_int_member_with_default(     "concurrent_downloads",    DEFAULT_CONCURRENT_DOWNLOADS    );
 		hide_invalid            =       config.get_boolean_member_with_default( "hide_invalid",            DEFAULT_HIDE_INVALID            );
@@ -379,6 +383,7 @@ public class Main : Application {
 #else
 		ppa_uri                 = json_get_string( config, "ppa_uri",                 DEFAULT_PPA_URI                 );
 		all_proxy               = json_get_string( config, "all_proxy",               DEFAULT_ALL_PROXY               );
+		user_agent              = json_get_string( config, "user_agent",              DEFAULT_USER_AGENT              );
 		connect_timeout_seconds = json_get_int(    config, "connect_timeout_seconds", DEFAULT_CONNECT_TIMEOUT_SECONDS );
 		concurrent_downloads    = json_get_int(    config, "concurrent_downloads",    DEFAULT_CONCURRENT_DOWNLOADS    );
 		hide_invalid            = json_get_bool(   config, "hide_invalid",            DEFAULT_HIDE_INVALID            );
@@ -527,6 +532,7 @@ public class Main : Application {
 		+ " --quiet";
 		if (connect_timeout_seconds>0) cmd += " --connect-timeout="+connect_timeout_seconds.to_string();
 		if (all_proxy.length>0) cmd += " --all-proxy='"+all_proxy+"'";
+		if (user_agent.length>0) cmd += " --user-agent='"+user_agent+"'";
 		cmd += " '"+ppa_uri+"'";
 
 		vprint(cmd,3);

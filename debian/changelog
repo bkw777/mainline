@@ -1,3 +1,9 @@
+mainline (1.4.13) unstable; urgency=medium
+
+  * configurable http client user-agent string
+
+ -- Brian K. White <b.kenyon.w@gmail.com>  Fri, 04 Apr 2025 00:54:43 -0400
+
 mainline (1.4.12) unstable; urgency=medium
 
   * fix build on jammy by detecting vte version with pkgkit
