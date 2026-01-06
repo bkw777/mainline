@@ -1,8 +1,3 @@
-# Temporary Notice
-2025-04-06 - If you can't install any kernels, go to Settings -> Network -> Mainline-PPA URL  
-and replace the url with this mirror: `https://mainline.teamsforlinux.de/mainline/`  
-See https://github.com/bkw777/mainline/issues/354#issuecomment-2779917983 for more info.
-
 # Mainline Kernels
 A tool for installing [Ubuntu Mainline Kernel Builds](https://wiki.ubuntu.com/Kernel/MainlineBuilds) onto debian-based distributions.
 
