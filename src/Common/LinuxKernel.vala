@@ -1067,8 +1067,9 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 			string[] stat = {"","",""};
 			var t = deb_url_list.size.to_string();
 			while (dt.is_running) {
+				// status_line is "" until aria2c reports progress, and splitting "" gives an empty array
 				stat = dt.status_line.split_set(" /");
-				if (stat[1]!=null && stat[2]!=null) pbar(int64.parse(stat[1])/MB,int64.parse(stat[2])/MB,"MB - file "+(dt.prg_count+1).to_string()+"/"+t);
+				if (stat.length>2) pbar(int64.parse(stat[1])/MB,int64.parse(stat[2])/MB,"MB - file "+(dt.prg_count+1).to_string()+"/"+t);
 				Thread.usleep(250000);
 			}
 			pbar(0,0);

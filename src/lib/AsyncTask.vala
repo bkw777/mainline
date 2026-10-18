@@ -9,8 +9,15 @@ public abstract class AsyncTask : GLib.Object {
 
 	public string[] spawn_args = {};
 	public string stdin_data = "";
-	public string status_line = "";
 	public int prg_count = 0;
+
+	// Written by the read_stdout() thread, read by whoever is polling the task,
+	// so both sides go through the lock and readers get their own copy.
+	string _status_line = "";
+	public string status_line {
+		owned get { lock (_status_line) { return _status_line; } }
+		set { lock (_status_line) { _status_line = value; } }
+	}
 	public bool is_running = false;
 
 	protected AsyncTask() {
