@@ -25,4 +25,15 @@ namespace l_exec {
 		try { Process.spawn_command_line_async(cmd); }
 		catch (SpawnError e) { vprint(e.message,1,stderr); }
 	}
+
+	// Posix.system(), but returning the command's exit code like a shell does.
+	// system() returns a wait status (exit 1 comes back as 256), and returned
+	// from main() that gets truncated to its low 8 bits, which is 0.
+	public int system_exit_code(string cmd) {
+		int s = Posix.system(cmd);
+		if (s == -1) return 1;
+		if (Process.if_exited(s)) return Process.exit_status(s);
+		if (Process.if_signaled(s)) return 128 + Process.term_sig(s);
+		return 1;
+	}
 }

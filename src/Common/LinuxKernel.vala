@@ -1165,7 +1165,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		cmd = sanitize_cmd(App.auth_cmd).printf("dpkg --install "+cmd);
 		vprint(cmd,2);
 		if (!ask()) return 1;
-		var r = Posix.system(cmd);
+		var r = system_exit_code(cmd);
 		if (!App.keep_debs) foreach (var f in flist) rm(f);
 		return r;
 	}
@@ -1204,7 +1204,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		var cmd = sanitize_cmd(App.auth_cmd).printf("dpkg --purge "+pnames);
 		vprint(cmd,2);
 		if (!ask()) return 1;
-		return Posix.system(cmd);
+		return system_exit_code(cmd);
 	}
 
 // ---------------------------------------------------------------------
