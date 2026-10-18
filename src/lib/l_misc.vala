@@ -98,6 +98,17 @@ namespace l_misc {
 		catch (Error e) { vprint(e.message,1,stderr); return false; }
 	}
 
+	// sha-256 of a file as lowercase hex, or null if it can't be read
+	public string? sha256_file(string path) {
+		var fs = FileStream.open(path, "rb");
+		if (fs == null) return null;
+		var cs = new Checksum(ChecksumType.SHA256);
+		uint8 buf[65536];
+		size_t n;
+		while ((n = fs.read(buf)) > 0) cs.update(buf, n);
+		return cs.get_string();
+	}
+
 	public bool exists(string path) {
 		var t = FileTest.IS_REGULAR;
 		if (path.has_suffix("/")) t = FileTest.IS_DIR;

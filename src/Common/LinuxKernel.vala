@@ -1027,39 +1027,43 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		int MB = 1024 * 1024;
 		string[] flist = {};
 
-		// if keep_debs, then only download if missing
-		// if not keep_debs, then always download
-		foreach (var f in deb_url_list.keys) if (!App.keep_debs || !exists(CACHE_KDIR+"/"+f)) flist += f;
-
 		// CHECKSUMS
-		if (flist.length>0) {
-			deb_checksum_list.clear();
-			if (App.verify_checksums) {
-				vprint(_("checksums enabled"),2);
+		// loaded before deciding what to download, so kept debs get checked too
+		deb_checksum_list.clear();
+		if (App.verify_checksums) {
+			vprint(_("checksums enabled"),2);
 
-				// download the CHECKSUMS file
-				if (!exists(CHECKSUMS_FILE)) {
-					var dt = new DownloadTask();
-					dt.add_to_queue(new DownloadItem(CHECKSUMS_URI,Path.get_dirname(CHECKSUMS_FILE),Path.get_basename(CHECKSUMS_FILE)));
-					dt.execute();
-					while (dt.is_running) Thread.usleep(100000);
-				}
-				if (!exists(CHECKSUMS_FILE)) return false;
-
-				// parse the CHECKSUMS file
-				// extract the sha256 hashes and save in aria2c format
-				// 52e8d02b2975920e7cc9a9d57843fcb8049addf53f1894073afce02d0e7351b2  linux-image-unsigned-6.2.9-060209-generic_6.2.9-060209.202303301133_amd64.deb
-				// deb_checksum_list[filename]="sha-256=hash"
-				// deb_checksum_list["linux-image-unsigned-6.2.9-060209-generic_6.2.9-060209.202303301133_amd64.deb"]="sha-256=52e8d02b2975920e7cc9a9d57843fcb8049addf53f1894073afce02d0e7351b2"
-				// aria2c -h#checksum  ;aria2c -v |grep "^Hash Algorithms:"
-				// FIXME assumption: if 1st word is 64 bytes then it is a sha256 hash
-				// FIXME assumption: there will always be exactly 2 spaces between hash & filename
-				foreach (string l in fread(CHECKSUMS_FILE).split("\n")) {
-					var w = l.split(" ");
-					if (w.length==3 && w[0].length==64) deb_checksum_list[w[2]] = "sha-256="+w[0];
-				}
+			// download the CHECKSUMS file
+			if (!exists(CHECKSUMS_FILE)) {
+				var dt = new DownloadTask();
+				dt.add_to_queue(new DownloadItem(CHECKSUMS_URI,Path.get_dirname(CHECKSUMS_FILE),Path.get_basename(CHECKSUMS_FILE)));
+				dt.execute();
+				while (dt.is_running) Thread.usleep(100000);
 			}
+			if (!exists(CHECKSUMS_FILE)) return false;
 
+			// parse the CHECKSUMS file
+			// extract the sha256 hashes and save in aria2c format
+			// 52e8d02b2975920e7cc9a9d57843fcb8049addf53f1894073afce02d0e7351b2  linux-image-unsigned-6.2.9-060209-generic_6.2.9-060209.202303301133_amd64.deb
+			// deb_checksum_list[filename]="sha-256=hash"
+			// deb_checksum_list["linux-image-unsigned-6.2.9-060209-generic_6.2.9-060209.202303301133_amd64.deb"]="sha-256=52e8d02b2975920e7cc9a9d57843fcb8049addf53f1894073afce02d0e7351b2"
+			// aria2c -h#checksum  ;aria2c -v |grep "^Hash Algorithms:"
+			// FIXME assumption: if 1st word is 64 bytes then it is a sha256 hash
+			// FIXME assumption: there will always be exactly 2 spaces between hash & filename
+			foreach (string l in fread(CHECKSUMS_FILE).split("\n")) {
+				var w = l.split(" ");
+				if (w.length==3 && w[0].length==64) deb_checksum_list[w[2]] = "sha-256="+w[0];
+			}
+		}
+
+		// if keep_debs, then only download if missing or failing its checksum
+		// if not keep_debs, then always download
+		foreach (var f in deb_url_list.keys) {
+			if (!App.keep_debs || !exists(CACHE_KDIR+"/"+f)) flist += f;
+			else if (App.verify_checksums && !checksum_ok(f)) flist += f;
+		}
+
+		if (flist.length>0) {
 			var dt = new DownloadTask();
 			foreach (var f in flist) dt.add_to_queue(new DownloadItem(deb_url_list[f],CACHE_KDIR,f,deb_checksum_list[f]));
 			vprint(_("Downloading %s").printf(version_main));
@@ -1074,8 +1078,27 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 			pbar(0,0);
 		}
 
-		foreach (string f in deb_url_list.keys) if (!exists(CACHE_KDIR+"/"+f)) r = false;
+		// aria2c leaves the file in place when a download fails partway or fails its
+		// checksum, so existing isn't enough. Check the hash here, and without hashes,
+		// treat a leftover .aria2 control file as an incomplete download.
+		foreach (string f in deb_url_list.keys) {
+			var p = CACHE_KDIR+"/"+f;
+			bool ok = exists(p);
+			if (ok && App.verify_checksums) ok = checksum_ok(f);
+			else if (ok && exists(p+".aria2")) { vprint(_("Incomplete download: %s").printf(f),1,stderr); ok = false; }
+			if (!ok) { rm(p); rm(p+".aria2"); r = false; }
+		}
 		return r;
+	}
+
+	// true if the downloaded file f matches its sha-256 from CHECKSUMS
+	bool checksum_ok(string f) {
+		var want = deb_checksum_list[f];
+		if (want == null) { vprint(_("No checksum for %s").printf(f),1,stderr); return false; }
+		var got = sha256_file(CACHE_KDIR+"/"+f);
+		if (got != null && "sha-256="+got == want) return true;
+		vprint(_("Checksum mismatch: %s").printf(f),1,stderr);
+		return false;
 	}
 
 // ---------------------------------------------------------------------
