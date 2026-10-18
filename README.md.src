@@ -175,10 +175,10 @@ To clean up the mess from trying to install with the old debianutils:
   
   A few lines of output are printed before the commandline has been parsed, so `-v 0` doesn't silence them.  
   The environment variable is read earlier in the process and can silence all output.  
-  `VERBOSE=0 BRANDING_SHORTNAME install-latest --yes`
+  `VERBOSE=0 BRANDING_SHORTNAME install-latest`
 
   The exit value is also meaningful.  
-  `VERBOSE=0 ;BRANDING_SHORTNAME install-latest --yes && BRANDING_SHORTNAME uninstall-old --yes`  
+  `export VERBOSE=0 ;BRANDING_SHORTNAME install-latest && BRANDING_SHORTNAME uninstall-old`  
 
 ## If **Uninstall Old** doesn't remove some distribution kernel packages  
   Use your normal package manager like apt or synaptic to remove the parent meta-package:  
@@ -225,9 +225,10 @@ To clean up the mess from trying to install with the old debianutils:
   If you install this, you should disable the notifications in settings.
 ```
 $ sudo -i
-# cat >/etc/cron.d/mainline <<-%EOF
+# cat >/etc/cron.d/mainline <<-'%EOF'
 	# Check for new kernels on kernel.ubuntu.com every 4 hours, randomize over ~2.8 hours
-	1 */4 * * * root sleep ${RANDOM:0:4} ;VERBOSE=0 ;BRANDING_SHORTNAME --install-latest --yes && { BRANDING_SHORTNAME --uninstall-old --yes ;for a in /home/*/.Xauthority ;do echo [[ -s $a ]] && DISPLAY=:0.0 XAUTHORITY=$a notify-send -t 0 -a BRANDING_SHORTNAME -i BRANDING_SHORTNAME "BRANDING_LONGNAME" "New kernel installed" ;done ; }
+	SHELL=/bin/bash
+	1 */4 * * * root sleep ${RANDOM:0:4} ;export VERBOSE=0 ;BRANDING_SHORTNAME install-latest && { BRANDING_SHORTNAME uninstall-old ;for a in /home/*/.Xauthority ;do [[ -s $a ]] && DISPLAY=:0.0 XAUTHORITY=$a notify-send -t 0 -a BRANDING_SHORTNAME -i BRANDING_SHORTNAME "BRANDING_LONGNAME" "New kernel installed" ;done ; }
 %EOF
 ```
 
