@@ -281,7 +281,12 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		} catch (Error e) { vprint(e.message,1,stderr); }
 	}
 
+	// mk_kernel_list(false) returns before the worker finishes, so a second call
+	// could otherwise have two workers rebuilding kernel_list and kall at once
+	static Mutex worker_mutex;
+
 	static bool mk_kernel_list_worker(owned Notifier? notifier) {
+		worker_mutex.lock();
 		vprint("mk_kernel_list_worker()",3);
 		if ((!App.gui_mode && !App.index_is_fresh) || Main.VERBOSE>1) vprint("Updating Kernels...");
 
@@ -388,6 +393,7 @@ public class LinuxKernel : GLib.Object, Gee.Comparable<LinuxKernel> {
 		App.run_notify_script_if_due();
 
 		if (notifier != null) notifier(true);
+		worker_mutex.unlock();
 		return true;
 	}
 

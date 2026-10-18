@@ -47,6 +47,7 @@ public class MainWindow : Window {
 	Gdk.Window? win = null;
 
 	bool updating;
+	bool update_pending = false;
 
 	Gee.ArrayList<LinuxKernel> selected_kernels;
 	Gtk.ListStore tm;
@@ -441,6 +442,10 @@ public class MainWindow : Window {
 	// Update the cache as optimally as possible.
 	void update_cache(bool reload=false) {
 		vprint("update_cache(reload="+reload.to_string()+")",3);
+		// Settings stays usable during an update, and closing it with a changed filter
+		// lands here. Run that update after the current one instead of alongside it.
+		// (Reload is insensitive while updating, so a pending update is never a reload.)
+		if (updating) { update_pending = true; return; }
 		string msg = _("Updating Kernels...");
 		win.set_cursor(cursor_busy);
 		updating = true;
@@ -462,6 +467,10 @@ public class MainWindow : Window {
 				if (App.command == "install") {
 					App.command = "";
 					do_install(LinuxKernel.vlist_to_klist(App.requested_versions));
+				}
+				if (update_pending) {
+					update_pending = false;
+					update_cache();
 				}
 				return false;
 			});
