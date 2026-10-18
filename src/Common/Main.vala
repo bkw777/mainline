@@ -531,21 +531,21 @@ public class Main : Application {
 		+ " --dry-run"
 		+ " --quiet";
 		if (connect_timeout_seconds>0) cmd += " --connect-timeout="+connect_timeout_seconds.to_string();
-		if (all_proxy.length>0) cmd += " --all-proxy='"+all_proxy+"'";
-		if (user_agent.length>0) cmd += " --user-agent='"+user_agent+"'";
-		cmd += " '"+ppa_uri+"'";
+		// cmd is parsed with shell quoting rules, so quote the user-editable values properly
+		if (all_proxy.length>0) cmd += " --all-proxy="+Shell.quote(all_proxy);
+		if (user_agent.length>0) cmd += " --user-agent="+Shell.quote(user_agent);
+		cmd += " "+Shell.quote(ppa_uri);
 
 		vprint(cmd,3);
 
 		int status = exec_sync(cmd, out std_out, out std_err);
-		if (std_err.length > 0) vprint(std_err,1,stderr);
+		if (std_err != null && std_err.length > 0) vprint(std_err,1,stderr); // null if aria2c couldn't be run
 
 		ppa_tried = true;
 		ppa_up = false;
 		if (status == 0) ppa_up = true;
 		else vprint(_("Can not reach site")+": \""+ppa_uri+"\"",1,stderr);
 
-		ppa_up = true;
 		return ppa_up;
 	}
 

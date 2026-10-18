@@ -13,8 +13,12 @@ namespace l_exec {
 		vprint("exec_sync("+cmd+")",3);
 		//if (App.no_mode) return 0;
 		int r = 0;
-		try { Process.spawn_command_line_sync(cmd, out std_out, out std_err); }
-		catch (SpawnError e) { r = 1; vprint(e.message,1,stderr); }
+		int ws = 0;
+		try {
+			Process.spawn_command_line_sync(cmd, out std_out, out std_err, out ws);
+			r = Process.if_exited(ws) ? Process.exit_status(ws) : 1;
+		}
+		catch (Error e) { r = 1; vprint(e.message,1,stderr); } // SpawnError, or ShellError if cmd doesn't parse
 		return r;
 	}
 
